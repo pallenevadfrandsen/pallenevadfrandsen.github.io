@@ -31,7 +31,9 @@
     .hero h1{ font-family:'Playfair Display', serif; font-size: clamp(2rem, 3.8vw + .5rem, 3.2rem); line-height:1.15; margin:.2rem 0 .3rem }
     .hero .kicker{ font-weight:500; letter-spacing:.02em; color:#1d2a37 }
     blockquote{ margin:1rem 0 0; padding-left:1rem; border-left:4px solid var(--rust); font-family:'Playfair Display', serif; font-style:italic; color:#1d2a37 }
-    .hero-figure{ border-radius:var(--radius); overflow:hidden; aspect-ratio:16/10; background: linear-gradient(135deg, #7f9aab, #e4dfd7); display:grid; place-items:center }
+    .hero-figure{ position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/10; background: linear-gradient(135deg, #7f9aab, #e4dfd7); display:grid; place-items:center }
+    .hero-caption-overlay{ position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.45); color:white; font-size:0.9rem; line-height:1.4; padding:0.6rem 1rem; font-style:italic; }
+    .hero-caption-overlay span{ opacity:0.9; font-style:normal; font-weight:400; }
     @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr } }
     section{ padding: clamp(2.5rem, 6vw, 4rem) 0 } .section-title{ font-family:'Playfair Display', serif; font-size: clamp(1.6rem, 2vw + .8rem, 2.2rem); margin:0 0 1rem } .muted{ color:#2a3a49 }
     .talks-grid{ display:grid; gap:1rem; grid-template-columns:repeat(2, minmax(0,1fr)) }
@@ -66,85 +68,14 @@
           <h1>Palle Nevad Frandsen</h1>
           <blockquote>“Jeg tror på, at de bedste historier får os til at se verden fra nye vinkler.”</blockquote>
         </div>
-      <figure class="hero-figure" aria-label="Foredragsbillede">
-  <img src="assets/hero.jpg" alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen">
-  <figcaption class="hero-caption-overlay">
-    Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. <span>Foto: Palle Nevad Frandsen</span>
-  </figcaption>
-</figure>
-      </div>
-    </section>
-
-    <section id="foredrag">
-      <div class="container">
-        <h2 class="section-title">Foredrag</h2>
-        <p class="muted">Jeg holder oplæg og fortællende foredrag om de historier, der binder os sammen – i kulturen, i politikken og i hverdagen.</p>
-        <div class="space-m"></div>
-        <div class="talks-grid">
-          <article class="card">
-            <div class="card-head">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M4 5h16M7 5v14M17 5v14"/></svg>
-              <h3>Kulturen skaber fællesskab</h3>
-            </div>
-            <p>Hvordan musik, teater, litteratur og lokale initiativer ikke bare underholder – men samler mennesker på tværs af alder, baggrund og holdninger.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-head">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M4 20V8l8-5 8 5v12"/><path d="M9 12h6v8H9z"/></svg>
-              <h3>Lokalpolitik gennem journalistens øjne</h3>
-            </div>
-            <p>Med afsæt i mange års arbejde som lokaljournalist fortæller jeg om dynamikkerne bag kommunalpolitikens scenetæppe – hvor mennesker, magt og værdier mødes.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-head">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <h3>Filippinerne – et sydøstasiatisk paradis set gennem en danskers øjne</h3>
-            </div>
-            <p>Fortællinger fra et land fuld af kontraster, hvor varme, fællesskab og tro spiller en central rolle i hverdagen. Et personligt blik på kulturmøder, livsglæde og det menneskelige i globaliseringens tid.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-head">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h12"/><path d="M4 8h10a2 2 0 0 1 2 2v11.5"/><path d="M8 12h6M8 16h4"/></svg>
-              <h3>Den gode historie</h3>
-            </div>
-            <p>Hvordan finder man den – og hvordan fortælles den, så den rammer? Jeg deler erfaringer fra et liv med ord, mennesker og formidling.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="bag-historien" style="background:linear-gradient(0deg, white, #eeeae3);">
-      <div class="container split">
-        <div class="panel">
-          <h2 class="section-title">Bag historien</h2>
-          <p>Jeg har i mere end 20 år arbejdet med journalistik, der tager udgangspunkt i mennesker og fællesskab. For mig handler den gode historie om at forstå – ikke fordømme. Om at give stemme til de erfaringer, der ofte bliver overset.</p>
-          <p>Her på siden deler jeg fortællinger, artikler og projekter, hvor jeg forsøger at se bag beslutningerne og finde de nuancer, der gør en forskel.</p>
-          <div class="space-s"></div>
-          <a class="cta" href="#artikler">Se artikler & projekter</a>
-        </div>
-        <div class="panel" id="om">
-          <h2 class="section-title">Om Palle</h2>
-          <p>Jeg er <strong>storyteller med over 20 års journalistisk erfaring</strong> fra dagbladsverdenen. Jeg har en stærk evne til at formidle komplekse historier på en engagerende og forståelig måde – uanset om det handler om lokalpolitik, kultur eller menneskelige møder.</p>
-          <p>Jeg er god til at finde den gode historie i selv de små begivenheder og har arbejdet med alt fra nyhedsformidling til portrætinterviews. Jeg tror på, at gode historier er med til at danne os som mennesker – og at vi gennem <em>konstruktiv journalistik</em> kan gøre både vores lokalsamfund og vores verden til et bedre sted.</p>
-          <div class="space-s"></div>
-          <a class="cta" href="mailto:kontakt@pallenevadfrandsen.dk">Book et foredrag</a>
-        </div>
+        <figure class="hero-figure" aria-label="Foredragsbillede">
+          <img src="assets/hero.jpg" alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen">
+          <figcaption class="hero-caption-overlay">
+            Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. <span>Foto: Palle Nevad Frandsen</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="container small">
-      <p><strong>Kontakt</strong><br>
-        <a href="mailto:kontakt@pallenevadfrandsen.dk">kontakt@pallenevadfrandsen.dk</a>
-      </p>
-      <p>© <span id="year"></span> Palle Nevad Frandsen</p>
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
