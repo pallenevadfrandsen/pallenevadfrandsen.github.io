@@ -30,36 +30,29 @@
     .hero-figure{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/11; background:linear-gradient(135deg,#7f9aab,#e4dfd7); display:grid; place-items:center}
     .hero-caption-overlay{position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.45); color:white; font-size:0.9rem; line-height:1.4; padding:0.6rem 1rem; font-style:italic;}
     .hero-caption-overlay span{opacity:0.9; font-style:normal; font-weight:400;}
-    /* Sections */
     section{padding:clamp(2.5rem, 6vw, 4rem) 0}
     .section-title{font-family:'Playfair Display', serif; font-size:clamp(1.6rem, 2vw + .8rem, 2.2rem); margin:0 0 1rem}
     .muted{color:#2a3a49}
-    /* Talks grid */
     .talks-grid{display:grid; gap:1rem; grid-template-columns:repeat(2, minmax(0,1fr))}
     .card{background:white; border:1px solid #ece9e3; border-radius:var(--radius); padding:1.1rem 1.1rem}
     .card h3{margin:.2rem 0 .4rem; font-size:1.05rem; font-weight:700} .card p{margin:0}
-    .icon{width:28px; height:28px; margin-right:.6rem; flex:none; color:var(--blue)} .card-head{display:flex; align-items:center; margin-bottom:.5rem}
     @media(max-width:720px){.talks-grid{grid-template-columns:1fr}}
-    /* Split */
     .split{display:grid; gap:1.4rem; grid-template-columns:1fr 1fr}
     .panel{background:white; border:1px solid #ece9e3; border-radius:var(--radius); padding:1.25rem}
     .panel p{margin:.5rem 0}
     @media(max-width:900px){.split{grid-template-columns:1fr}}
     footer{padding:2.2rem 0 3rem; border-top:1px solid #ece9e3} .small{font-size:.95rem}
-    /* Articles grid */
-    .grid-articles{display:grid; gap:1rem; grid-template-columns:repeat(3,minmax(0,1fr))}
-    .article{background:white; border:1px solid #ece9e3; border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column}
-    .article img{aspect-ratio:16/9; object-fit:cover}
-    .article .body{padding:1rem}
-    .article h3{margin:.2rem 0 .4rem; font-size:1.05rem}
-    .meta{font-size:.85rem; color:#435263; margin-bottom:.4rem}
-    .button-link{display:inline-block; margin-top:.6rem; padding:.45rem .75rem; border:1px solid #cfd7dd; border-radius:10px; text-decoration:none; color:#1F2E3D}
-    .button-link:hover{background:#f2f5f7}
-    @media(max-width:980px){.grid-articles{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:640px){.grid-articles{grid-template-columns:1fr}}
-    .breadcrumb{font-size:.92rem; margin-bottom:.5rem; color:#2a3a49}
-    .breadcrumb a{color:inherit; opacity:.9; text-decoration:none}
-    .breadcrumb a:hover{text-decoration:underline}
+    /* Kontakt */
+    .contact-wrap{display:grid; gap:1.4rem; grid-template-columns:1.1fr .9fr}
+    @media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+    .contact-card{background:white; border:1px solid #ece9e3; border-radius:var(--radius); padding:1.1rem}
+    .contact-form label{display:block; font-weight:600; margin:.6rem 0 .25rem}
+    .contact-form input,.contact-form textarea{width:100%; padding:.7rem .8rem; border:1px solid #dfe5ea; border-radius:10px; font:inherit; background:#fff}
+    .contact-form button{margin-top:.8rem; border:none; border-radius:999px; padding:.7rem 1rem; background:var(--blue); color:white; font-weight:600; cursor:pointer}
+    .contact-form button:hover{background:#4c6a7e}
+    .socials{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.8rem}
+    .socials a{display:inline-flex; align-items:center; gap:.45rem; padding:.35rem .6rem; border:1px solid #dfe5ea; border-radius:999px; text-decoration:none; color:#1F2E3D; font-size:.95rem}
+    .socials a:hover{background:#f4f7f9}
   </style>
 </head>
 <body>
@@ -67,11 +60,11 @@
     <div class="container nav">
       <div class="brand">Palle Nevad Frandsen</div>
       <nav>
-        <a href="index.html#foredrag">Foredrag</a>
+        <a href="#foredrag">Foredrag</a>
         <a href="artikler.html">Artikler & projekter</a>
-        <a href="index.html#bag-historien">Bag historien</a>
-        <a href="index.html#om">Om</a>
-        <a class="cta" href="mailto:kontakt@pallenevadfrandsen.dk">Kontakt</a>
+        <a href="#bag-historien">Bag historien</a>
+        <a href="#om">Om</a>
+        <a class="cta" href="mailto:palle.frandsen@gmail.com">Email</a>
       </nav>
     </div>
   </header>
@@ -98,22 +91,10 @@
         <h2 class="section-title">Foredrag</h2>
         <p class="muted">Jeg holder oplæg og fortællende foredrag om de historier, der binder os sammen – i kulturen, i politikken og i hverdagen.</p>
         <div class="talks-grid">
-          <article class="card"><div class="card-head">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M4 5h16M7 5v14M17 5v14"/></svg>
-            <h3>Kulturen skaber fællesskab</h3></div>
-            <p>Hvordan musik, teater, litteratur og lokale initiativer ikke bare underholder – men samler mennesker.</p></article>
-          <article class="card"><div class="card-head">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M4 20V8l8-5 8 5v12"/><path d="M9 12h6v8H9z"/></svg>
-            <h3>Lokalpolitik gennem journalistens øjne</h3></div>
-            <p>Erfaringer fra kommunalpolitikens maskinrum – mennesker, magt og værdier.</p></article>
-          <article class="card"><div class="card-head">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <h3>Filippinerne – set gennem en danskers øjne</h3></div>
-            <p>Fortællinger fra et land af stærke fællesskaber og varme møder.</p></article>
-          <article class="card"><div class="card-head">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h12"/><path d="M4 8h10a2 2 0 0 1 2 2v11.5"/><path d="M8 12h6M8 16h4"/></svg>
-            <h3>Den gode historie</h3></div>
-            <p>Fra idé til fortælling, der rammer.</p></article>
+          <article class="card"><h3>Kulturen skaber fællesskab</h3><p>Hvordan musik, teater, litteratur og lokale initiativer samler mennesker.</p></article>
+          <article class="card"><h3>Lokalpolitik gennem journalistens øjne</h3><p>Indblik i kommunalpolitikens maskinrum – mennesker, magt og værdier.</p></article>
+          <article class="card"><h3>Filippinerne – set gennem en danskers øjne</h3><p>Fortællinger fra et land af stærke fællesskaber og varme møder.</p></article>
+          <article class="card"><h3>Den gode historie</h3><p>Fra idé til fortælling, der rammer.</p></article>
         </div>
       </div>
     </section>
@@ -128,7 +109,44 @@
         <div class="panel" id="om">
           <h2 class="section-title">Om Palle</h2>
           <p>Storyteller med over 20 års erfaring fra dagbladsverdenen. Jeg formidler komplekse historier engagerende og forståeligt.</p>
-          <a class="cta" href="mailto:kontakt@pallenevadfrandsen.dk">Book et foredrag</a>
+          <a class="cta" href="mailto:palle.frandsen@gmail.com">Book et foredrag</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container contact-wrap">
+        <div class="contact-card">
+          <h2 class="section-title">Kontakt</h2>
+          <p><strong>Email:</strong> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a><br>
+             <strong>Tlf.:</strong> <a href="tel:+4551239336">+45 51 23 93 36</a></p>
+          <div class="socials">
+            <a href="https://www.facebook.com/palle.n.frandsen" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/pallefrandsen/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/pallefrandsen/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            <a href="https://www.tiktok.com/@nevad75" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3 style="margin-top:0">Send mig en besked</h3>
+          <!-- Formspree: skift FORM_ID nedenfor til din egen Formspree ID -->
+          <form action="https://formspree.io/f/FORM_ID" method="POST" class="contact-form">
+            <label>Dit navn</label>
+            <input type="text" name="name" required>
+            <label>Din e-mail</label>
+            <input type="email" name="_replyto" required>
+            <label>Besked</label>
+            <textarea name="message" rows="5" required></textarea>
+            <!-- ekstra felter -->
+            <input type="hidden" name="_subject" value="Henvendelse fra pallenevadfrandsen.github.io">
+            <input type="text" name="_gotcha" style="display:none">
+            <button type="submit">Send besked</button>
+            <p style="font-size:.9rem;opacity:.8;margin-top:.5rem">Ved at indsende accepterer du, at jeg kontakter dig på den oplyste e-mail/telefon.</p>
+          </form>
+          <p style="font-size:.9rem;opacity:.8;margin-top:.6rem">
+            <em>Tip:</em> Hvis knappen ikke virker endnu, skal du oprette en gratis formular på Formspree og sætte din <code>FORM_ID</code> ind i action-URL'en.
+          </p>
         </div>
       </div>
     </section>
@@ -136,7 +154,7 @@
 
   <footer>
     <div class="container small">
-      <p><strong>Kontakt</strong><br><a href="mailto:kontakt@pallenevadfrandsen.dk">kontakt@pallenevadfrandsen.dk</a></p>
+      <p><strong>Kontakt:</strong> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a></p>
       <p>© <span id="year"></span> Palle Nevad Frandsen</p>
     </div>
   </footer>

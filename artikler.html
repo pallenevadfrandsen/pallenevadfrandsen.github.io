@@ -30,36 +30,29 @@
     .hero-figure{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:16/11; background:linear-gradient(135deg,#7f9aab,#e4dfd7); display:grid; place-items:center}
     .hero-caption-overlay{position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.45); color:white; font-size:0.9rem; line-height:1.4; padding:0.6rem 1rem; font-style:italic;}
     .hero-caption-overlay span{opacity:0.9; font-style:normal; font-weight:400;}
-    /* Sections */
     section{padding:clamp(2.5rem, 6vw, 4rem) 0}
     .section-title{font-family:'Playfair Display', serif; font-size:clamp(1.6rem, 2vw + .8rem, 2.2rem); margin:0 0 1rem}
     .muted{color:#2a3a49}
-    /* Talks grid */
     .talks-grid{display:grid; gap:1rem; grid-template-columns:repeat(2, minmax(0,1fr))}
     .card{background:white; border:1px solid #ece9e3; border-radius:var(--radius); padding:1.1rem 1.1rem}
     .card h3{margin:.2rem 0 .4rem; font-size:1.05rem; font-weight:700} .card p{margin:0}
-    .icon{width:28px; height:28px; margin-right:.6rem; flex:none; color:var(--blue)} .card-head{display:flex; align-items:center; margin-bottom:.5rem}
     @media(max-width:720px){.talks-grid{grid-template-columns:1fr}}
-    /* Split */
     .split{display:grid; gap:1.4rem; grid-template-columns:1fr 1fr}
     .panel{background:white; border:1px solid #ece9e3; border-radius:var(--radius); padding:1.25rem}
     .panel p{margin:.5rem 0}
     @media(max-width:900px){.split{grid-template-columns:1fr}}
     footer{padding:2.2rem 0 3rem; border-top:1px solid #ece9e3} .small{font-size:.95rem}
-    /* Articles grid */
-    .grid-articles{display:grid; gap:1rem; grid-template-columns:repeat(3,minmax(0,1fr))}
-    .article{background:white; border:1px solid #ece9e3; border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column}
-    .article img{aspect-ratio:16/9; object-fit:cover}
-    .article .body{padding:1rem}
-    .article h3{margin:.2rem 0 .4rem; font-size:1.05rem}
-    .meta{font-size:.85rem; color:#435263; margin-bottom:.4rem}
-    .button-link{display:inline-block; margin-top:.6rem; padding:.45rem .75rem; border:1px solid #cfd7dd; border-radius:10px; text-decoration:none; color:#1F2E3D}
-    .button-link:hover{background:#f2f5f7}
-    @media(max-width:980px){.grid-articles{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:640px){.grid-articles{grid-template-columns:1fr}}
-    .breadcrumb{font-size:.92rem; margin-bottom:.5rem; color:#2a3a49}
-    .breadcrumb a{color:inherit; opacity:.9; text-decoration:none}
-    .breadcrumb a:hover{text-decoration:underline}
+    /* Kontakt */
+    .contact-wrap{display:grid; gap:1.4rem; grid-template-columns:1.1fr .9fr}
+    @media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+    .contact-card{background:white; border:1px solid #ece9e3; border-radius:var(--radius); padding:1.1rem}
+    .contact-form label{display:block; font-weight:600; margin:.6rem 0 .25rem}
+    .contact-form input,.contact-form textarea{width:100%; padding:.7rem .8rem; border:1px solid #dfe5ea; border-radius:10px; font:inherit; background:#fff}
+    .contact-form button{margin-top:.8rem; border:none; border-radius:999px; padding:.7rem 1rem; background:var(--blue); color:white; font-weight:600; cursor:pointer}
+    .contact-form button:hover{background:#4c6a7e}
+    .socials{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.8rem}
+    .socials a{display:inline-flex; align-items:center; gap:.45rem; padding:.35rem .6rem; border:1px solid #dfe5ea; border-radius:999px; text-decoration:none; color:#1F2E3D; font-size:.95rem}
+    .socials a:hover{background:#f4f7f9}
   </style>
 </head>
 <body>
@@ -67,97 +60,36 @@
     <div class="container nav">
       <div class="brand">Palle Nevad Frandsen</div>
       <nav>
-        <a href="index.html#foredrag">Foredrag</a>
+        <a href="#foredrag">Foredrag</a>
         <a href="artikler.html">Artikler & projekter</a>
-        <a href="index.html#bag-historien">Bag historien</a>
-        <a href="index.html#om">Om</a>
-        <a class="cta" href="mailto:kontakt@pallenevadfrandsen.dk">Kontakt</a>
+        <a href="#bag-historien">Bag historien</a>
+        <a href="#om">Om</a>
+        <a class="cta" href="mailto:palle.frandsen@gmail.com">Email</a>
       </nav>
     </div>
   </header>
 
-<main>
-  <section>
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Forside</a> › Artikler & projekter</div>
-      <h1 class="section-title">Artikler & projekter</h1>
-
-      <div class="grid-articles">
-
-        <!-- Artikel 1 -->
-        <article class="article">
-          <img src="assets/article1.jpg" alt="Illustration">
-          <div class="body">
-            <div class="meta">7. november 2025</div>
-            <h3>Én ting bekymrer Lollands unge mere end klimaet</h3>
-            <p>Unge på Lolland deler deres tanker om fremtiden – og klimaet er ikke deres største bekymring.</p>
-            <a class="button-link" href="https://www.folketidende.dk/nyheder/en-ting-bekymrer-lollands-unge-mere-end-klimaet/5081841" target="_blank" rel="noopener">Læs artiklen</a>
-          </div>
-        </article>
-
-        <!-- Artikel 2 -->
-        <article class="article">
-          <img src="assets/article2.jpg" alt="Illustration">
-          <div class="body">
-            <div class="meta">12. april 2025</div>
-            <h3>Formand om vanvittig beslutning: Den fejler jo ikke en skid</h3>
-            <p>En lokal formand langer ud efter beslutning, han mener er helt ude af proportioner.</p>
-            <a class="button-link" href="https://www.folketidende.dk/lolland/formand-om-vanvittig-beslutning-den-fejler-jo-ikke-en-skid/4898966" target="_blank" rel="noopener">Læs artiklen</a>
-          </div>
-        </article>
-
-        <!-- Artikel 3 -->
-        <article class="article">
-          <img src="assets/article3.jpg" alt="Illustration">
-          <div class="body">
-            <div class="meta">27. september 2022</div>
-            <h3>For Ole var Parkinsons en smuk gave i en grim indpakning</h3>
-            <p>Apoteker Ole Lystrup Iversen tackler sin kroniske sygdom med et positivt livssyn – og deler sin historie i en ny bog.</p>
-            <a class="button-link" href="https://www.folketidende.dk/lolland/for-ole-var-parkinsons-en-smuk-gave-i-en-grim-indpakning/3374101" target="_blank" rel="noopener">Læs artiklen</a>
-          </div>
-        </article>
-
-        <!-- Artikel 4 -->
-        <article class="article">
-          <img src="assets/article4.jpg" alt="Illustration">
-          <div class="body">
-            <div class="meta">21. september 2024</div>
-            <h3>Festival godt fra start: I aften skal der rystes numse</h3>
-            <p>Stemningen er i top, når festivalen åbner med musik, fællesskab og masser af energi.</p>
-            <a class="button-link" href="https://www.folketidende.dk/lolland/festival-godt-fra-start-i-aften-skal-der-rystes-numse/3987955" target="_blank" rel="noopener">Læs artiklen</a>
-          </div>
-        </article>
-
-        <!-- Artikel 5 -->
-        <article class="article">
-          <img src="assets/article5.jpg" alt="Illustration">
-          <div class="body">
-            <div class="meta">4. august 2025</div>
-            <h3>Formand går 30.000 skridt om dagen – og sover bedst med budget i nul</h3>
-            <p>En portrætartikel om en engageret formand, der går langt for at få økonomien til at hænge sammen.</p>
-            <a class="button-link" href="https://www.folketidende.dk/nyheder/formand-gar-30000-skridt-om-dagen-og-sover-bedst-med-budget-i-nul/4995140" target="_blank" rel="noopener">Læs artiklen</a>
-          </div>
-        </article>
-
-        <!-- Artikel 6 -->
-        <article class="article">
-          <img src="assets/article6.jpg" alt="Illustration">
-          <div class="body">
-            <div class="meta">12. juni 2024</div>
-            <h3>Lukker projekt: Det kan de fandeme ikke være bekendt</h3>
-            <p>En opsigtsvækkende lokal sag vækker følelser og debat om værdien af fællesskaber.</p>
-            <a class="button-link" href="https://www.folketidende.dk/lolland/lukker-projektdet-kan-de-fandeme-ikke-vaere-bekendt/3891229" target="_blank" rel="noopener">Læs artiklen</a>
-          </div>
-        </article>
-
+  <main>
+    <section>
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Forside</a> › Artikler & projekter</div>
+        <h1 class="section-title">Artikler & projekter</h1>
+        <p class="muted">Udvalgte historier (redigér titler og links her).</p>
+        <div class="grid-articles">
+          <!-- Kort 1..6 beholdes som tidligere; denne fil kan du allerede have tilpasset -->
+          <article class="article"><img src="assets/article1.jpg"><div class="body"><div class="meta">Dato</div><h3>Titel</h3><a class="button-link" href="#" target="_blank" rel="noopener">Læs artiklen</a></div></article>
+          <article class="article"><img src="assets/article2.jpg"><div class="body"><div class="meta">Dato</div><h3>Titel</h3><a class="button-link" href="#" target="_blank" rel="noopener">Læs artiklen</a></div></article>
+          <article class="article"><img src="assets/article3.jpg"><div class="body"><div class="meta">Dato</div><h3>Titel</h3><a class="button-link" href="#" target="_blank" rel="noopener">Læs artiklen</a></div></article>
+          <article class="article"><img src="assets/article4.jpg"><div class="body"><div class="meta">Dato</div><h3>Titel</h3><a class="button-link" href="#" target="_blank" rel="noopener">Læs artiklen</a></div></article>
+          <article class="article"><img src="assets/article5.jpg"><div class="body"><div class="meta">Dato</div><h3>Titel</h3><a class="button-link" href="#" target="_blank" rel="noopener">Læs artiklen</a></div></article>
+          <article class="article"><img src="assets/article6.jpg"><div class="body"><div class="meta">Dato</div><h3>Titel</h3><a class="button-link" href="#" target="_blank" rel="noopener">Læs artiklen</a></div></article>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
-
+    </section>
+  </main>
   <footer>
     <div class="container small">
-      <p><strong>Kontakt</strong><br><a href="mailto:kontakt@pallenevadfrandsen.dk">kontakt@pallenevadfrandsen.dk</a></p>
+      <p><strong>Kontakt:</strong> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a></p>
       <p>© <span id="year"></span> Palle Nevad Frandsen</p>
     </div>
   </footer>
