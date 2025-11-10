@@ -16,36 +16,35 @@
     a{color:var(--blue);text-underline-offset:2px}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';color:var(--ink);background:var(--ivory);line-height:1.55;letter-spacing:.01em}
     .container{width:min(100% - 2rem,var(--maxw));margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(6px);background:rgba(247,245,242,.85);border-bottom:1px solid #e9e6e0}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(6px);background:rgba(247,245,242,.9);border-bottom:1px solid #e9e6e0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
     .brand{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,2vw + .5rem,1.6rem);font-weight:600;color:var(--ink);letter-spacing:.3px}
-    nav a{text-decoration:none;color:var(--ink);opacity:.9;font-weight:500;padding:.5rem .7rem;border-radius:10px}
+    nav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+    nav a{text-decoration:none;color:var(--ink);opacity:.9;font-weight:500;padding:.55rem .6rem;border-radius:10px;line-height:1}
     nav a:hover{background:rgba(89,122,145,.12)}
     .cta{background:var(--blue);color:white;padding:.55rem .9rem;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px rgba(89,122,145,.18)}
     .cta:hover{background:#4c6a7e}
-    /* Animations */
     @keyframes fadeUp { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform: translateY(0); } }
     /* HERO */
     .hero{padding:clamp(3rem,6vw,5rem) 0 3rem; background:linear-gradient(180deg,#f2f6f9 0%, #ffffff 55%);}
     .hero-grid{display:grid;gap:clamp(1.2rem,3vw,2rem);grid-template-columns:0.85fr 1.15fr;align-items:center}
     .hero .kicker{font-weight:600;letter-spacing:.02em;color:#1d2a37;opacity:.95; animation: fadeUp .5s ease both .05s;}
-    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5.2vw + .3rem,4.6rem);line-height:1.06;margin:.6rem 0 .8rem; letter-spacing:.2px; animation: fadeUp .6s ease both .1s;}
-    blockquote{margin:1.1rem auto 0; padding-left:0; max-width:34ch; text-align:center; border-left:none; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(1.25rem,1.7vw + .5rem,1.7rem); color:#1d2a37; animation: fadeUp .7s ease both .15s;}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.2vw + .3rem,4.6rem);line-height:1.06;margin:.6rem 0 .8rem; letter-spacing:.2px; animation: fadeUp .6s ease both .1s;}
+    blockquote{margin:1.1rem auto 0; padding-left:0; max-width:34ch; text-align:center; border-left:none; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(1.15rem,1.4vw + .6rem,1.7rem); color:#1d2a37; animation: fadeUp .7s ease both .15s;}
     .hero-figure{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/11;background:linear-gradient(135deg,#7f9aab,#e4dfd7);display:grid;place-items:center; animation: fadeUp .7s ease both .12s;}
+    .hero-figure img{width:100%;height:100%;object-fit:cover;display:block}
     .hero-caption-overlay{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);color:white;font-size:0.9rem;line-height:1.4;padding:0.6rem 1rem;font-style:italic;}
     .hero-caption-overlay span{opacity:0.9;font-style:normal;font-weight:400;}
     /* Sections */
     section{padding:clamp(2.5rem,6vw,4rem) 0}
     .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2vw + .8rem,2.2rem);margin:0 0 1rem}
     .muted{color:#2a3a49}
-    /* Teasers */
     .grid-2{display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))}
     @media(max-width:720px){.grid-2{grid-template-columns:1fr}}
     .card{background:white;border:1px solid #ece9e3;border-radius:var(--radius);padding:1.1rem}
     .button-row{margin-top:1rem}
     .button-link{display:inline-block;margin-top:.6rem;padding:.45rem .75rem;border:1px solid #cfd7dd;border-radius:10px;text-decoration:none;color:#1F2E3D}
     .button-link:hover{background:#f2f5f7}
-    /* Split */
     .split{display:grid;gap:1.4rem;grid-template-columns:1fr 1fr}
     @media(max-width:900px){.split{grid-template-columns:1fr}}
     .panel{background:white;border:1px solid #ece9e3;border-radius:var(--radius);padding:1.25rem}
@@ -66,6 +65,18 @@
     .address-line{font-style:italic;display:flex;align-items:center;gap:.4rem}
     footer{padding:2.2rem 0 3rem;border-top:1px solid #ece9e3}
     .small{font-size:.95rem}
+    /* Mobile adjustments */
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr;gap:1rem;}
+      .hero-figure{order:-1;aspect-ratio:4/3;}
+      .hero{padding:2.2rem 0;}
+    }
+    @media(max-width:680px){
+      .nav{gap:.5rem 0;}
+      nav{gap:.35rem;}
+      nav a.cta{margin-left:auto;}
+      .hero{margin-top:.2rem;}
+    }
   </style>
 </head>
 <body>
@@ -97,7 +108,6 @@
       </div>
     </section>
 
-    <!-- Kontaktsektion -->
     <section id="kontakt">
       <div class="container">
         <h2 class="section-title" style="margin-bottom:1rem;">Kontakt mig gerne her:</h2>
