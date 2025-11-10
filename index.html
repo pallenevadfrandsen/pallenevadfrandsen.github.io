@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Palle Nevad Frandsen – Journalist, fortæller og formidler</title>
-  <meta name="description" content="Palle Nevad Frandsen – Journalist, fortæller og formidler. Foredrag, artikler og fortællinger fra kultur, lokalpolitik og hverdagsliv." />
   <meta name="theme-color" content="#597A91" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,60 +23,18 @@
     nav a:hover{background:rgba(89,122,145,.12)}
     .cta{background:var(--blue);color:white;padding:.55rem .9rem;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px rgba(89,122,145,.18)}
     .cta:hover{background:#4c6a7e}
-    @keyframes fadeUp { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform: translateY(0); } }
-    /* HERO */
-    .hero{padding:clamp(3rem,6vw,5rem) 0 3rem; background:linear-gradient(180deg,#f2f6f9 0%, #ffffff 55%);}
-    .hero-grid{display:grid;gap:clamp(1.2rem,3vw,2rem);grid-template-columns:0.85fr 1.15fr;align-items:center}
-    .hero .kicker{font-weight:600;letter-spacing:.02em;color:#1d2a37;opacity:.95; animation: fadeUp .5s ease both .05s;}
-    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.2vw + .3rem,4.6rem);line-height:1.06;margin:.6rem 0 .8rem; letter-spacing:.2px; animation: fadeUp .6s ease both .1s;}
-    blockquote{margin:1.1rem auto 0; padding-left:0; max-width:34ch; text-align:center; border-left:none; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(1.15rem,1.4vw + .6rem,1.7rem); color:#1d2a37; animation: fadeUp .7s ease both .15s;}
-    .hero-figure{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/11;background:linear-gradient(135deg,#7f9aab,#e4dfd7);display:grid;place-items:center; animation: fadeUp .7s ease both .12s;}
-    .hero-figure img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-caption-overlay{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);color:white;font-size:0.9rem;line-height:1.4;padding:0.6rem 1rem;font-style:italic;}
-    .hero-caption-overlay span{opacity:0.9;font-style:normal;font-weight:400;}
-    /* Sections */
-    section{padding:clamp(2.5rem,6vw,4rem) 0}
+    section{padding:clamp(2.2rem,5vw,3.6rem) 0}
     .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2vw + .8rem,2.2rem);margin:0 0 1rem;color:#597A91}
     .muted{color:#2a3a49}
-    /* Teasers */
-    .grid-2{display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media(max-width:720px){.grid-2{grid-template-columns:1fr}}
-    .card{background:white;border:1px solid #ece9e3;border-radius:var(--radius);padding:1.1rem}
-    .button-row{margin-top:1rem}
     .button-link{display:inline-block;margin-top:.6rem;padding:.45rem .75rem;border:1px solid #cfd7dd;border-radius:10px;text-decoration:none;color:#1F2E3D}
     .button-link:hover{background:#f2f5f7}
-    /* Split */
-    .split{display:grid;gap:1.4rem;grid-template-columns:1fr 1fr}
-    @media(max-width:900px){.split{grid-template-columns:1fr}}
-    .panel{background:white;border:1px solid #ece9e3;border-radius:var(--radius);padding:1.25rem}
-    /* Kontakt */
-    .contact-wrap{display:grid;gap:1.4rem;grid-template-columns:1.1fr .9fr;align-items:stretch}
-    @media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
-    .contact-card{background:white;border:1px solid #ece9e3;border-radius:var(--radius);padding:1.1rem;height:100%;display:flex;flex-direction:column}
-    .portrait-wrap{aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;margin-top:.9rem}
-    .portrait-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-    .contact-form label{display:block;font-weight:600;margin:.6rem 0 .25rem}
-    .contact-form input,.contact-form textarea{width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px;font:inherit;background:#fff}
-    .contact-form button{margin-top:.8rem;border:none;border-radius:999px;padding:.7rem 1rem;background:var(--blue);color:white;font-weight:600;cursor:pointer}
-    .socials{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
-    .socials a{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .6rem;border:1px solid #dfe5ea;border-radius:999px;text-decoration:none;color:#1F2E3D;font-size:.95rem}
-    .socials a:hover{background:#f4f7f9}
-    .contact-meta p{margin:.2rem 0;}
-    .contact-meta .label{font-weight:600;}
-    .address-line{font-style:italic;display:flex;align-items:center;gap:.4rem}
     footer{padding:2.2rem 0 3rem;border-top:1px solid #ece9e3}
     .small{font-size:.95rem}
     /* Mobile adjustments */
-    @media(max-width:900px){
-      .hero-grid{grid-template-columns:1fr;gap:1rem;}
-      .hero-figure{order:-1;aspect-ratio:4/3;}
-      .hero{padding:2.2rem 0;}
-    }
     @media(max-width:680px){
       .nav{gap:.5rem 0;}
       nav{gap:.35rem;}
       nav a.cta{margin-left:auto;}
-      .hero{margin-top:.2rem;}
     }
   </style>
 </head>
@@ -88,56 +45,56 @@
       <nav>
         <a href="foredrag.html">Foredrag</a>
         <a href="artikler.html">Artikler & projekter</a>
-        <a href="bag-historien.html">Bag historien</a>
-        <a href="om.html">Om</a>
-        <a href="#kontakt" class="cta">Kontakt</a>
+        <a href="bag-historien.html">Et liv som reporter</a>
+        <a href="om.html">Inde i privaten</a>
+        <a href="#kontakt" class="cta" onclick="location.href='index.html#kontakt';return false;">Kontakt</a>
       </nav>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
+    <section class="hero" style="padding:clamp(3rem,6vw,5rem) 0 3rem;background:linear-gradient(180deg,#f2f6f9 0%, #ffffff 55%);">
+      <div class="container" style="display:grid;gap:clamp(1.2rem,3vw,2rem);grid-template-columns:0.85fr 1.15fr;align-items:center">
         <div>
-          <div class="kicker">Journalist, fortæller og formidler</div>
-          <h1>Palle Nevad Frandsen</h1>
-          <blockquote>“Jeg tror på, at de bedste historier får os til at se verden fra nye vinkler.”</blockquote>
+          <div class="muted" style="font-weight:600;">Journalist, fortæller og formidler</div>
+          <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.2vw + .3rem,4.6rem);line-height:1.06;margin:.6rem 0 .8rem;color:#1F2E3D">Palle Nevad Frandsen</h1>
+          <blockquote style="margin:1.1rem auto 0;max-width:34ch;text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.15rem,1.4vw + .6rem,1.7rem);color:#1d2a37;">“Jeg tror på, at de bedste historier får os til at se verden fra nye vinkler.”</blockquote>
         </div>
-        <figure class="hero-figure">
-          <img src="assets/hero.jpg" alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen">
-          <figcaption class="hero-caption-overlay">Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. <span>Foto: Palle Nevad Frandsen</span></figcaption>
+        <figure style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/11;background:linear-gradient(135deg,#7f9aab,#e4dfd7)">
+          <img src="assets/hero.jpg" alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen" style="width:100%;height:100%;object-fit:cover;display:block">
+          <figcaption style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);color:white;font-size:0.9rem;line-height:1.4;padding:0.6rem 1rem;font-style:italic;">Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. <span style="opacity:.9;font-style:normal;font-weight:400;">Foto: Palle Nevad Frandsen</span></figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- FORELÆSNINGER TEASER -->
+    <!-- Foredrag -->
     <section id="foredrag">
       <div class="container">
         <h2 class="section-title">Foredrag</h2>
         <p class="muted">Udvalgte oplæg – se flere emner på undersiden.</p>
-        <div class="grid-2">
-          <article class="card"><h3>Kulturen skaber fællesskab</h3><p>Hvordan musik, teater, litteratur og lokale initiativer samler mennesker.</p></article>
-          <article class="card"><h3>Lokalpolitik gennem journalistens øjne</h3><p>Indblik i kommunalpolitikens maskinrum – mennesker, magt og værdier.</p></article>
+        <div style="display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))">
+          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem"><h3>Kulturen skaber fællesskab</h3><p>Hvordan musik, teater, litteratur og lokale initiativer samler mennesker.</p></article>
+          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem"><h3>Lokalpolitik gennem journalistens øjne</h3><p>Indblik i kommunalpolitikens maskinrum – mennesker, magt og værdier.</p></article>
         </div>
         <div class="button-row"><a class="cta" href="foredrag.html">Se alle foredrag</a></div>
       </div>
     </section>
 
-    <!-- ARTIKLER TEASER -->
+    <!-- Artikler -->
     <section id="artikler-teaser" style="background:linear-gradient(0deg, white, #eeeae3);">
       <div class="container">
         <h2 class="section-title">Udvalgte artikler</h2>
         <p class="muted">Et par nedslag – læs flere artikler på undersiden.</p>
-        <div class="grid-2">
-          <article class="card" style="overflow:hidden">
-            <img src="assets/article1.jpg" alt="Unge og bekymringer – artikelbillede" style="aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:.7rem">
+        <div style="display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))">
+          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;overflow:hidden">
+            <img src="assets/article1.jpg" alt="" style="aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:.7rem">
             <div class="meta">7. november 2025</div>
             <h3 style="margin:.2rem 0 .4rem">En ting bekymrer Lollands unge mere end klimaet</h3>
             <a class="button-link" href="https://www.folketidende.dk/nyheder/en-ting-bekymrer-lollands-unge-mere-end-klimaet/5081841" target="_blank" rel="noopener">Læs artiklen</a>
           </article>
-          <article class="card" style="overflow:hidden">
-            <img src="assets/article5.jpg" alt="Portræt – artikelbillede" style="aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:.7rem">
+          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;overflow:hidden">
+            <img src="assets/article5.jpg" alt="" style="aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:.7rem">
             <div class="meta">4. august 2025</div>
             <h3 style="margin:.2rem 0 .4rem">Formand går 30.000 skridt om dagen – og sover bedst med budget i nul</h3>
             <a class="button-link" href="https://www.folketidende.dk/nyheder/formand-gar-30000-skridt-om-dagen-og-sover-bedst-med-budget-i-nul/4995140" target="_blank" rel="noopener">Læs artiklen</a>
@@ -147,15 +104,15 @@
       </div>
     </section>
 
-    <!-- ET LIV SOM REPORTER + INDE I PRIVATEN -->
-    <section id="bag-historien">
-      <div class="container split">
-        <div class="panel">
+    <!-- Et liv som reporter + Inde i privaten -->
+    <section>
+      <div class="container" style="display:grid;gap:1.4rem;grid-template-columns:1fr 1fr">
+        <div class="panel" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.25rem">
           <h2 class="section-title">Et liv som reporter</h2>
           <p>Jeg har i mere end 20 år arbejdet med journalistik, der tager udgangspunkt i mennesker og fællesskab.</p>
           <a class="cta" href="bag-historien.html">Læs mere</a>
         </div>
-        <div class="panel" id="om">
+        <div class="panel" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.25rem">
           <h2 class="section-title">Inde i privaten</h2>
           <p>Storyteller med over 20 års erfaring fra dagbladsverdenen. Jeg formidler komplekse historier engagerende og forståeligt.</p>
           <a class="cta" href="om.html">Læs mere</a>
@@ -163,46 +120,44 @@
       </div>
     </section>
 
-    <!-- KONTAKT -->
+    <!-- Kontakt -->
     <section id="kontakt">
       <div class="container">
         <h2 class="section-title" style="margin-bottom:1rem;">Jeg vil gerne høre fra dig</h2>
-        <div class="contact-wrap">
-          <div class="contact-card">
+        <div class="contact-wrap" style="display:grid;gap:1.4rem;grid-template-columns:1.1fr .9fr;align-items:stretch">
+          <div class="contact-card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;height:100%;display:flex;flex-direction:column">
             <div class="contact-body">
               <h3 style="margin:0 0 .6rem">Kontakt</h3>
               <div class="contact-meta">
                 <p class="address-line">📍 <em>Østre Boulevard 23, Maribo</em></p>
-                <p><span class="label">Email:</span> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a></p>
-                <p><span class="label">Tlf.:</span> <a href="tel:+4551239336">+45 51 23 93 36</a></p>
+                <p><span class="label" style="font-weight:600">Email:</span> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a></p>
+                <p><span class="label" style="font-weight:600">Tlf.:</span> <a href="tel:+4551239336">+45 51 23 93 36</a></p>
               </div>
-              <div class="socials" style="margin-top:.7rem">
-                <a href="https://www.facebook.com/palle.n.frandsen" target="_blank" rel="noopener">Facebook</a>
-                <a href="https://www.linkedin.com/in/pallefrandsen/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://www.instagram.com/pallefrandsen/" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://www.tiktok.com/@nevad75" target="_blank" rel="noopener">TikTok</a>
+              <div class="socials" style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.7rem">
+                <a href="https://www.facebook.com/palle.n.frandsen" target="_blank" rel="noopener" class="button-link">Facebook</a>
+                <a href="https://www.linkedin.com/in/pallefrandsen/" target="_blank" rel="noopener" class="button-link">LinkedIn</a>
+                <a href="https://www.instagram.com/pallefrandsen/" target="_blank" rel="noopener" class="button-link">Instagram</a>
+                <a href="https://www.tiktok.com/@nevad75" target="_blank" rel="noopener" class="button-link">TikTok</a>
               </div>
             </div>
-            <figure class="portrait-wrap">
-              <img src="assets/palle.jpg" alt="Palle Nevad Frandsen">
+            <figure class="portrait-wrap" style="aspect-ratio:4/5;border-radius:14px;overflow:hidden;margin-top:.9rem">
+              <img src="assets/palle.jpg" alt="Palle Nevad Frandsen" style="width:100%;height:100%;object-fit:cover;display:block">
             </figure>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;height:100%;display:flex;flex-direction:column">
             <h3 style="margin-top:0">Send mig en besked</h3>
             <form action="https://formspree.io/f/mdkynbdl" method="POST" class="contact-form">
               <label>Dit navn</label>
-              <input type="text" name="name" required>
+              <input type="text" name="name" required style="width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px">
               <label>Din e-mail</label>
-              <input type="email" name="_replyto" required>
+              <input type="email" name="_replyto" required style="width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px">
               <label>Besked</label>
-              <textarea name="message" rows="6" required></textarea>
+              <textarea name="message" rows="6" required style="width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px"></textarea>
               <input type="hidden" name="_subject" value="Henvendelse fra pallenevadfrandsen.github.io">
               <input type="text" name="_gotcha" style="display:none">
-              <button type="submit">Send besked</button>
-              <p style="font-size:.9rem;opacity:.8;margin-top:.5rem">
-                Du kan også skrive direkte på <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a>.
-              </p>
+              <button type="submit" class="cta" style="border:none;cursor:pointer;margin-top:.8rem">Send besked</button>
+              <p style="font-size:.9rem;opacity:.8;margin-top:.5rem">Du kan også skrive direkte på <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a>.</p>
             </form>
           </div>
         </div>
