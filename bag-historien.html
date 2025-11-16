@@ -168,11 +168,24 @@
     }
 
     .stories-grid{
-      display:grid;
-      gap:1.6rem;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      margin-top:1.6rem;
-    }
+    .stories-grid{
+  display:grid;
+  gap:1.6rem;
+  grid-template-columns:repeat(2,minmax(0,1fr)); /* 2 kolonner på desktop */
+  margin-top:1.6rem;
+}
+
+/* Sidste boks (nr. 5) skal fylde hele bredden */
+.stories-grid .story-card:last-child{
+  grid-column:1 / -1;
+}
+
+/* På mobil skal alle bare ligge under hinanden */
+@media (max-width:768px){
+  .stories-grid{
+    grid-template-columns:1fr;
+  }
+}
     .story-card{
       background:#fff;
       border-radius:var(--radius);
