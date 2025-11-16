@@ -23,28 +23,252 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--blue:#597A91;--ink:#1F2E3D;--ivory:#F7F5F2;--sand:#E4DFD7;--rust:#C27A57;--maxw:1120px;--radius:14px;}
-    *,*::before,*::after{box-sizing:border-box} html,body{margin:0;padding:0} img{max-width:100%;display:block}
+    :root{
+      --blue:#597A91;
+      --ink:#1F2E3D;
+      --ivory:#F7F5F2;
+      --sand:#E4DFD7;
+      --rust:#C27A57;
+      --maxw:1120px;
+      --radius:14px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    img{max-width:100%;display:block}
     html{scroll-behavior:smooth;}
     a{color:var(--blue);text-underline-offset:2px}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';color:var(--ink);background:var(--ivory);line-height:1.55;letter-spacing:.01em}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';
+      color:var(--ink);
+      background:var(--ivory);
+      line-height:1.55;
+      letter-spacing:.01em
+    }
     .container{width:min(100% - 2rem,var(--maxw));margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(6px);background:rgba(247,245,242,.9);border-bottom:1px solid #e9e6e0}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
-    .brand{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,2vw + .5rem,1.6rem);font-weight:600;color:var(--ink);letter-spacing:.3px}
-    nav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
-    nav a{text-decoration:none;color:var(--ink);opacity:.9;font-weight:500;padding:.55rem .6rem;border-radius:10px;line-height:1}
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:saturate(120%) blur(6px);
+      background:rgba(247,245,242,.9);
+      border-bottom:1px solid #e9e6e0
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:.9rem 0;
+      flex-wrap:wrap
+    }
+    .brand{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(1.25rem,2vw + .5rem,1.6rem);
+      font-weight:600;
+      color:var(--ink);
+      letter-spacing:.3px
+    }
+    nav{
+      display:flex;
+      gap:.4rem;
+      flex-wrap:wrap;
+      align-items:center
+    }
+    nav a{
+      text-decoration:none;
+      color:var(--ink);
+      opacity:.9;
+      font-weight:500;
+      padding:.55rem .6rem;
+      border-radius:10px;
+      line-height:1
+    }
     nav a:hover{background:rgba(89,122,145,.12)}
-    .cta{background:var(--blue);color:white;padding:.55rem .9rem;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px rgba(89,122,145,.18)}
+    .cta{
+      background:var(--blue);
+      color:white;
+      padding:.55rem .9rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 4px 14px rgba(89,122,145,.18)
+    }
     .cta:hover{background:#4c6a7e}
     section{padding:clamp(2.2rem,5vw,3.6rem) 0}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2vw + .8rem,2.2rem);margin:0 0 1rem;color:#597A91}
+    .section-title{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(1.6rem,2vw + .8rem,2.2rem);
+      margin:0 0 1rem;
+      color:#597A91
+    }
     .muted{color:#2a3a49}
-    .button-link{display:inline-block;margin-top:.6rem;padding:.45rem .75rem;border:1px solid #cfd7dd;border-radius:10px;text-decoration:none;color:#1F2E3D}
+    .button-link{
+      display:inline-block;
+      margin-top:.6rem;
+      padding:.45rem .75rem;
+      border:1px solid #cfd7dd;
+      border-radius:10px;
+      text-decoration:none;
+      color:#1F2E3D
+    }
     .button-link:hover{background:#f2f5f7}
-    footer{padding:2.2rem 0 3rem;border-top:1px solid #ece9e3}
+    footer{
+      padding:2.2rem 0 3rem;
+      border-top:1px solid #ece9e3
+    }
     .small{font-size:.95rem}
-    @media(max-width:680px){.nav{gap:.5rem 0;} nav{gap:.35rem;} nav a.cta{margin-left:auto;} }
+    @media(max-width:680px){
+      .nav{gap:.5rem 0;}
+      nav{gap:.35rem;}
+      nav a.cta{margin-left:auto;}
+    }
+
+    /* --- Nye layout-styles til denne underside --- */
+
+    .lead{
+      font-size:1.05rem;
+      max-width:640px;
+      color:#2a3a49;
+    }
+    .back{
+      display:inline-block;
+      margin-bottom:.7rem;
+      border:1px solid #cfd7dd;
+      border-radius:999px;
+      padding:.35rem .8rem;
+      font-size:.95rem;
+      color:var(--ink);
+      text-decoration:none;
+    }
+    .back:hover{background:#f2f5f7;}
+
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
+      gap:2.2rem;
+      align-items:center;
+    }
+    .hero img{
+      width:100%;
+      border-radius:var(--radius);
+      object-fit:cover;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
+    }
+    .hero-tag{
+      font-size:.9rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:#6a7a88;
+      margin-bottom:.45rem;
+    }
+    .hero-quote{
+      margin-top:1.2rem;
+      font-style:italic;
+      color:#435262;
+    }
+
+    .stories-grid{
+      display:grid;
+      gap:1.6rem;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      margin-top:1.6rem;
+    }
+    .story-card{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #ece9e3;
+      padding:1.2rem 1.3rem;
+      box-shadow:0 10px 28px rgba(0,0,0,.06);
+    }
+    .story-label{
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:#7b8894;
+      margin-bottom:.25rem;
+    }
+    .story-card h3{
+      font-size:1.05rem;
+      margin:.1rem 0 .5rem;
+      font-weight:600;
+      color:var(--ink);
+    }
+    .story-card p{
+      margin:.25rem 0;
+      font-size:.98rem;
+    }
+
+    .gallery-grid{
+      display:grid;
+      gap:1rem;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      margin-top:1.6rem;
+    }
+    .gallery-item{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #ece9e3;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 10px 28px rgba(0,0,0,.06);
+    }
+    .gallery-item img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-item p{
+      margin:0;
+      padding:.8rem .9rem;
+      font-size:.95rem;
+      color:#3b4653;
+    }
+
+    .values-grid{
+      display:grid;
+      gap:1.2rem;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      margin-top:1.2rem;
+    }
+    .value{
+      background:#f1eeea;
+      border-radius:var(--radius);
+      padding:1rem 1.1rem;
+      font-size:.98rem;
+    }
+    .value strong{
+      display:block;
+      margin-bottom:.25rem;
+    }
+
+    .highlights{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #ece9e3;
+      padding:1.3rem 1.4rem;
+      box-shadow:0 10px 28px rgba(0,0,0,.06);
+      margin-top:1.4rem;
+    }
+    .highlights ul{
+      padding-left:1.1rem;
+      margin:.3rem 0 0;
+    }
+    .highlights li{
+      margin:.25rem 0;
+      font-size:.98rem;
+    }
+
+    .closing{
+      font-size:1rem;
+      max-width:640px;
+      color:#2a3a49;
+    }
+
+    @media (max-width:768px){
+      .hero{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
@@ -61,16 +285,234 @@
     </div>
   </header>
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Et liv som reporter – Palle Nevad Frandsen", "url": "https://pallenevadfrandsen.github.io/bag-historien.html"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://pallenevadfrandsen.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Et liv som reporter", "item": "https://pallenevadfrandsen.github.io/bag-historien.html"}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Et liv som reporter – Palle Nevad Frandsen",
+    "url": "https://pallenevadfrandsen.github.io/bag-historien.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem","position": 1,"name": "Forside","item": "https://pallenevadfrandsen.github.io/"},
+      {"@type": "ListItem","position": 2,"name": "Et liv som reporter","item": "https://pallenevadfrandsen.github.io/bag-historien.html"}
+    ]
+  }
+  </script>
+
   <main>
+    <!-- HERO -->
     <section>
       <div class="container">
-        <a href="index.html" class="button-link">← Til forsiden</a>
-        <h1 class="section-title">Et liv som reporter</h1>
+        <a href="index.html" class="back">← Til forsiden</a>
 
-        <p>Storyteller med mere end 20 års journalistisk erfaring, og med flere års frivilligt arbejde i skoleverdenen, blandt andet som formand for bestyrelsen på en stor privatskole. 
-        Loyal, hårdtarbejdende og empatisk medarbejder, der er god til at lytte og hurtig til at lære.</p>
+        <div class="hero">
+          <div>
+            <div class="hero-tag">Et liv som reporter</div>
+            <h1 class="section-title">Nedslag fra mere end 20 år i den lokale dagbladsverden</h1>
+            <p class="lead">
+              Gennem mere end 20 år som journalist i den lokale dagbladsverden har jeg mødt mennesker,
+              der har formet mig – og historier, jeg aldrig glemmer. Jeg har fået Lolland helt ind under huden
+              og har mødt mennesker i både glæde og sorg. Her deler jeg nogle af de øjeblikke, der har gjort mig
+              til den fortæller, jeg er i dag.
+            </p>
+            <p class="lead">
+              Storyteller med mere end 20 års journalistisk erfaring, og med flere års frivilligt arbejde i skoleverdenen,
+              blandt andet som formand for bestyrelsen på en stor privatskole. Loyal, hårdtarbejdende og empatisk, god til
+              at lytte og hurtig til at lære.
+            </p>
+            <p class="hero-quote">
+              “Jeg tror på, at de bedste historier findes dér, hvor nogen tør åbne døren bare på klem – og hvor
+              vi bruger journalistikken til at gøre verden en lille smule klogere.”
+            </p>
+          </div>
+
+          <div>
+            <img src="assets/reporter1.jpg" alt="Ung journalistpraktikant foran Folketidende">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEDSLAG I ARBEJDSLIVET -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Nedslag i arbejdslivet</h2>
+        <p class="lead">
+          Journalistikkens styrke ligger i mødet med mennesker. Her er nogle af de situationer,
+          der har sat sig fast – og formet min måde at arbejde på.
+        </p>
+
+        <div class="stories-grid">
+          <article class="story-card">
+            <div class="story-label">Anekdote</div>
+            <h3>Interviewet der ændrede min måde at lytte på</h3>
+            <p>
+              Stilheden er ikke fjenden, når et interview går tæt på. Min fornemste opgave er at lytte – for ellers
+              findes historien ikke.
+            </p>
+            <p>
+              Journalistik handler ikke kun om at skrive, men om at være til stede, helt stille, mens et andet menneske
+              åbner døren på klem. Det mærkede jeg især, da jeg sad over for Ole Lystrup, og han fortalte om sin sygdom.
+              Den slags samtaler bærer man med sig – længe efter teksten er trykt.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-label">Lokaljournalistik</div>
+            <h3>Da en lille ting blev til en stor historie</h3>
+            <p>
+              Mange af de vigtigste historier begynder som noget småt. Et opslag på Facebook, en kollega der nævner
+              “noget mærkeligt i byen”, eller en borger der spørger: “Er det ikke lidt underligt, at…?”.
+            </p>
+            <p>
+              Det er præcis dér, lokaljournalistikken lever. Det kan være en butiksejer, der siger stop, et atletikstadion
+              i forfald eller en beslutning i kommunalbestyrelsen, der rammer helt almindelige mennesker. Det vigtigste er,
+              at der er følelser på spil – og at nogen tør stille spørgsmål.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-label">Mennesker</div>
+            <h3>Når mennesker viser os deres stærkeste og svageste sider</h3>
+            <p>
+              At sidde over for et ungt menneske, der har mistet en af de personer, der betød mest i hendes liv,
+              er noget, jeg aldrig slipper. Når den man har kær rives væk i et voldsomt overfald, og verden slås
+              i tusind stykker, kræver det tillid begge veje.
+            </p>
+            <p>
+              Jeg havde fulgt sagen, hørt de grusomme detaljer, men historien var ikke færdig, da dommeren afsagde
+              kendelse. Den var først færdig, da familien fik lov til at fortælle deres historie. Sammen gav vi
+              offeret den afsked, han havde fortjent.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-label">Reportage</div>
+            <h3>I marken – med våde sko og skarpe deadlines</h3>
+            <p>
+              Jeg har stået i stormvejr, vandret ud på dybt vand i stormfloder og bevæget mig ud på bundløs grund
+              i en safaripark. Jeg synker gerne i til knæene, hvis bare historien er god – og heldigvis er kilderne
+              gode til at give en hjælpende hånd.
+            </p>
+            <p>
+              Nogle dage er notesbogen lige så mudret som støvlerne. Men det er ofte netop der, hvor man bliver lidt
+              beskidt, at historierne får mest liv.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-label">Perspektiv</div>
+            <h3>Hvad lokaljournalistik betyder for et lokalsamfund</h3>
+            <p>
+              Jeg har set en artikel samle en by – og jeg har set dem skabe debat, vrede, glæde, håb og forventninger.
+            </p>
+            <p>
+              Lokaljournalistik er ikke bare information. Det er fællesskab i tryk og en del af livsnerven i et lokalsamfund.
+              Når vi fortæller historierne om dem, der bor her, bliver vi klogere på hinanden – og på os selv.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Øjeblikke fra felten</h2>
+        <p class="lead">
+          Et lille udpluk af situationer, jeg aldrig helt glemmer – fra praktikanten med blokken under armen til
+          mudder, strikkepinde og spontane udfordringer.
+        </p>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/reporter1.jpg" alt="Praktikant foran Folketidende">
+            <p>Ung journalistpraktikant klar til lokaljournalistikken i Maribo. Foto: Jan Knudsen.</p>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/reporter2.jpg" alt="I cockpittet over Holeby">
+            <p>Praktikken tog mig til nye højder. Her som “pilot” over Holeby – uden anden erfaring end at styre en cykel. Foto: Kim Løwenstein.</p>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/reporter3.jpg" alt="Smed for en dag">
+            <p>Prøver lykken som smed for en dag – journalistik med sod på hænderne. Foto: Kim Løwenstein.</p>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/reporter4.jpg" alt="Strikker på ældrecenter">
+            <p>Overraskede på ældrecentret som habil strikker – nogle historier kræver, at man sætter sig helt ned i øjenhøjde. Foto: Kim Løwenstein.</p>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/reporter5.jpg" alt="Udmattet løbereportage">
+            <p>Havde sat mig for at lave en løbereportage, men glemte at træne op til den – og endte totalt udmattet. Foto: Kim Løwenstein.</p>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/reporter6.jpg" alt="Fanget i mudder">
+            <p>Fanget i mudder under besøg i Knuthenborg Safaripark. Heldigvis fik jeg en hjælpende hånd. Foto: Jan Knudsen.</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VÆRDIER -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Mine værdier som journalist</h2>
+        <div class="values-grid">
+          <div class="value">
+            <strong>1. Nysgerrighed før konklusioner</strong>
+            Jeg går helst ind i en historie med flere spørgsmål end svar. Det giver plads til nuancer – og til at blive klogere undervejs.
+          </div>
+          <div class="value">
+            <strong>2. Nærvær i mødet med mennesker</strong>
+            Et interview er ikke bare et spørgeskema. Det er et møde mellem to mennesker, hvor tillid og tid er afgørende.
+          </div>
+          <div class="value">
+            <strong>3. Konstruktiv tilgang til konflikter</strong>
+            Konflikter er en naturlig del af samfundslivet. Jeg forsøger at belyse dem, så vi forstår hinanden bedre – ikke for at puste til flammerne.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HØJDEPUNKTER -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Udvalgte højdepunkter</h2>
+        <div class="highlights">
+          <ul>
+            <li>Flere tusinde artikler gennem årene – fra korte nyheder til længere fortællinger og portrætter.</li>
+            <li>Interviews med ministre, borgmestre, kulturpersonligheder og de lokale frivillige, der får hverdagen til at fungere.</li>
+            <li>Reportager fra festivaler, valg, stormfloder, skoleliv, idrætsbaner og 100-års fødselsdage.</li>
+            <li>Provinskorrespondent på TV 2 Radio og valgekspert på Radio24syv.</li>
+            <li>Produceret portrætter, features og fortællinger i både ord og billeder for trykte og digitale medier.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- AFSLUTNING -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Hvorfor jeg stadig elsker lokaljournalistik</h2>
+        <p class="closing">
+          Jeg tror på, at journalistik er et håndværk, der skal udføres med respekt, nysgerrighed og omtanke.
+          Og at de bedste historier ofte findes dér, hvor ingen først tænker at lede – i hverdagen, mellem mennesker,
+          der måske selv mener, at deres liv er helt almindeligt.
+        </p>
+        <p class="closing">
+          Har du en historie, der fortjener at blive fortalt – eller vil du høre mere om mit arbejde – er du altid velkommen
+          til at tage fat i mig via kontaktmulighederne på forsiden.
+        </p>
       </div>
     </section>
   </main>
