@@ -522,13 +522,18 @@
     <section id="kontakt" class="contact-section">
       <div class="container">
         <div class="contact-grid">
-          <!-- Tekst + info -->
+          <!-- Tekst + billede + info -->
           <div>
             <h2 class="contact-header">Jeg vil gerne høre fra dig</h2>
             <p class="contact-meta">
               Har du brug for en oplægsholder, en fortæller eller en journalistisk makker til et projekt?
               Så er du meget velkommen til at tage fat i mig.
             </p>
+
+            <!-- Billedet flyttet herop -->
+            <div class="contact-photo" style="margin-bottom:0.9rem;">
+              <img src="assets/contact-palle.jpg" alt="Palle Nevad Frandsen">
+            </div>
 
             <p class="contact-details">
               <span><span class="icon">📍</span>Østre Boulevard 23, 4930 Maribo</span>
@@ -548,12 +553,8 @@
             </div>
           </div>
 
-          <!-- Billede + formular -->
+          <!-- Formular uden billede -->
           <div class="contact-card">
-            <div class="contact-photo">
-              <img src="assets/contact-palle.jpg" alt="Palle Nevad Frandsen">
-            </div>
-
             <h3 style="margin:.2rem 0 .4rem;font-size:1.05rem;">Send mig en besked</h3>
             <p class="muted" style="font-size:.9rem;margin:0 0 .4rem;">
               Skriv et par linjer om, hvad du har i tankerne – så vender jeg tilbage hurtigst muligt.
@@ -582,16 +583,3 @@
         </div>
       </div>
     </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      Kontakt: <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a><br>
-      © <span id="year"></span> Palle Nevad Frandsen
-    </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
