@@ -4,47 +4,367 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Palle Nevad Frandsen – Journalist, fortæller og formidler</title>
-  <meta name="description" content="Journalist og storyteller med 20+ års erfaring. Foredrag, artikler og menneskefortællinger om kultur, lokalpolitik og den gode historie." />
-  <link rel="canonical" href="https://pallenevadfrandsen.github.io/"/>
-  <meta property="og:locale" content="da_DK">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Palle Nevad Frandsen – Journalist, fortæller og formidler">
-  <meta property="og:description" content="Journalist og storyteller med 20+ års erfaring. Foredrag, artikler og menneskefortællinger om kultur, lokalpolitik og den gode historie.">
-  <meta property="og:url" content="https://pallenevadfrandsen.github.io/">
-  <meta property="og:site_name" content="Palle Nevad Frandsen">
-  <meta property="og:image" content="https://pallenevadfrandsen.github.io/assets/hero.jpg">
-  <meta property="og:image:alt" content="Palle Nevad Frandsen">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Palle Nevad Frandsen – Journalist, fortæller og formidler">
-  <meta name="twitter:description" content="Journalist og storyteller med 20+ års erfaring. Foredrag, artikler og menneskefortællinger om kultur, lokalpolitik og den gode historie.">
-  <meta name="twitter:image" content="https://pallenevadfrandsen.github.io/assets/hero.jpg">
+  <meta name="description" content="Palle Nevad Frandsen – journalist, storyteller og foredragsholder med menneskefortællinger, kultur, lokalpolitik og den gode historie i fokus." />
   <meta name="theme-color" content="#597A91" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--blue:#597A91;--ink:#1F2E3D;--ivory:#F7F5F2;--sand:#E4DFD7;--rust:#C27A57;--maxw:1120px;--radius:14px;}
-    *,*::before,*::after{box-sizing:border-box} html,body{margin:0;padding:0} img{max-width:100%;display:block}
+    :root{
+      --blue:#597A91;
+      --ink:#1F2E3D;
+      --ivory:#F7F5F2;
+      --maxw:1120px;
+      --radius:14px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0}
     html{scroll-behavior:smooth;}
-    a{color:var(--blue);text-underline-offset:2px}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';color:var(--ink);background:var(--ivory);line-height:1.55;letter-spacing:.01em}
-    .container{width:min(100% - 2rem,var(--maxw));margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(6px);background:rgba(247,245,242,.9);border-bottom:1px solid #e9e6e0}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
-    .brand{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,2vw + .5rem,1.6rem);font-weight:600;color:var(--ink);letter-spacing:.3px}
-    nav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
-    nav a{text-decoration:none;color:var(--ink);opacity:.9;font-weight:500;padding:.55rem .6rem;border-radius:10px;line-height:1}
-    nav a:hover{background:rgba(89,122,145,.12)}
-    .cta{background:var(--blue);color:white;padding:.55rem .9rem;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px rgba(89,122,145,.18)}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--ink);
+      background:var(--ivory);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block}
+
+    a{color:var(--blue);text-decoration:none;text-underline-offset:2px}
+    a:hover{text-decoration:underline}
+
+    .container{
+      width:min(100% - 2rem,var(--maxw));
+      margin-inline:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(247,245,242,.94);
+      backdrop-filter:saturate(120%) blur(6px);
+      border-bottom:1px solid #e9e6e0;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:.75rem;
+      padding:.8rem 0;
+      flex-wrap:wrap;
+    }
+    .brand{
+      font-family:"Playfair Display",serif;
+      font-weight:600;
+      font-size:clamp(1.2rem,2vw + .6rem,1.6rem);
+    }
+    nav{
+      display:flex;
+      gap:.35rem;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-end;
+      flex:1;
+    }
+    nav a{
+      font-size:.93rem;
+      padding:.45rem .6rem;
+      border-radius:999px;
+      color:var(--ink);
+      white-space:nowrap;
+    }
+    nav a:hover{
+      background:rgba(89,122,145,.12);
+      text-decoration:none;
+    }
+    .cta{
+      background:var(--blue);
+      color:#fff;
+      padding:.45rem .9rem;
+      border-radius:999px;
+      font-weight:600;
+      box-shadow:0 4px 12px rgba(89,122,145,.25);
+    }
     .cta:hover{background:#4c6a7e}
-    section{padding:clamp(2.2rem,5vw,3.6rem) 0}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2vw + .8rem,2.2rem);margin:0 0 1rem;color:#597A91}
-    .muted{color:#2a3a49}
-    .button-link{display:inline-block;margin-top:.6rem;padding:.45rem .75rem;border:1px solid #cfd7dd;border-radius:10px;text-decoration:none;color:#1F2E3D}
-    .button-link:hover{background:#f2f5f7}
-    footer{padding:2.2rem 0 3rem;border-top:1px solid #ece9e3}
-    .small{font-size:.95rem}
-    @media(max-width:680px){.nav{gap:.5rem 0;} nav{gap:.35rem;} nav a.cta{margin-left:auto;} }
+
+    @media (max-width:720px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      nav{
+        justify-content:flex-start;
+      }
+    }
+
+    main section{
+      padding:clamp(2.1rem,5vw,3.4rem) 0;
+    }
+    .section-title{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.5rem,2vw + .7rem,2.2rem);
+      margin:0 0 .7rem;
+      color:var(--blue);
+    }
+    .muted{color:#2a3a49;font-size:1rem;}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.6fr);
+      gap:2rem;
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.9rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#6a7a88;
+      margin-bottom:.2rem;
+    }
+    .hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.9rem,2.4vw + .8rem,2.6rem);
+      margin:.1rem 0 .6rem;
+      color:var(--ink);
+    }
+    .hero-lead{
+      font-size:1.02rem;
+      color:#2a3a49;
+      margin:0 0 .9rem;
+    }
+    .hero-quote{
+      font-style:italic;
+      margin:0;
+      color:#435262;
+      font-size:.98rem;
+    }
+    .hero-img-wrap{
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 18px 45px rgba(0,0,0,.23);
+      position:relative;
+    }
+    .hero-img-wrap img{
+      width:100%;
+      height:100%;
+      max-height:420px;
+      object-fit:cover;
+    }
+    .hero-caption{
+      position:absolute;
+      inset:auto .9rem .9rem .9rem;
+      background:rgba(0,0,0,.55);
+      color:#f8f4ee;
+      font-size:.78rem;
+      padding:.45rem .6rem;
+      border-radius:10px;
+      line-height:1.4;
+    }
+    @media (max-width:820px){
+      .hero{
+        grid-template-columns:1fr;
+      }
+      .hero-img-wrap img{
+        max-height:360px;
+      }
+    }
+
+    /* Foredrag + artikler */
+    .two-col{
+      display:grid;
+      grid-template-columns:minmax(0,1.6fr) minmax(0,1.4fr);
+      gap:2rem;
+      align-items:flex-start;
+    }
+    @media (max-width:860px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+    }
+    .pill{
+      font-size:.85rem;
+      display:inline-block;
+      padding:.25rem .7rem;
+      border-radius:999px;
+      background:#e8edf2;
+      color:#425365;
+      margin-bottom:.4rem;
+    }
+    .link-button{
+      display:inline-flex;
+      align-items:center;
+      gap:.3rem;
+      margin-top:.7rem;
+      padding:.4rem .75rem;
+      border-radius:999px;
+      border:1px solid #cfd7dd;
+      font-size:.9rem;
+      text-decoration:none;
+      color:var(--ink);
+      background:#fff;
+    }
+    .link-button:hover{
+      background:#f2f5f7;
+      text-decoration:none;
+    }
+
+    .article-card{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #ece9e3;
+      padding:1rem 1rem .9rem;
+      margin-bottom:.7rem;
+    }
+    .article-date{
+      font-size:.85rem;
+      color:#6a7582;
+      margin-bottom:.2rem;
+    }
+    .article-title{
+      font-weight:600;
+      margin:0 0 .3rem;
+      font-size:.98rem;
+    }
+
+    /* små grids */
+    .mini-grid{
+      display:grid;
+      gap:.9rem;
+    }
+
+    /* Et liv / Om */
+    .subtle-card{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #ece9e3;
+      padding:1rem 1.1rem;
+      margin-top:.8rem;
+    }
+
+    /* Kontaktsektion */
+    .contact-section{
+      background:#eae5de;
+      border-top:1px solid #d9d0c4;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr);
+      gap:1.6rem;
+      align-items:stretch;
+    }
+    @media (max-width:820px){
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+    }
+    .contact-header{
+      font-family:"Playfair Display",serif;
+      font-size:1.6rem;
+      margin:0 0 .4rem;
+      color:var(--ink);
+    }
+    .contact-meta{
+      font-style:italic;
+      font-size:.98rem;
+      margin-bottom:.7rem;
+    }
+    .contact-details{
+      font-size:.96rem;
+      margin:.15rem 0;
+    }
+    .contact-details span{
+      display:inline-flex;
+      align-items:center;
+      gap:.35rem;
+    }
+    .contact-details .icon{
+      font-style:normal;
+    }
+
+    .social-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.35rem;
+      margin:.7rem 0 0;
+    }
+    .social-links a{
+      font-size:.9rem;
+      padding:.3rem .65rem;
+      border-radius:999px;
+      border:1px solid rgba(66,83,101,.25);
+      background:#f7f5f2;
+    }
+    .social-links a:hover{
+      background:#f0ece6;
+      text-decoration:none;
+    }
+
+    .contact-card{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #dcd3c8;
+      padding:1.1rem 1.2rem 1.2rem;
+      display:flex;
+      flex-direction:column;
+      gap:.8rem;
+    }
+    .contact-photo{
+      border-radius:var(--radius);
+      overflow:hidden;
+      margin-bottom:.6rem;
+    }
+    .contact-photo img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+    }
+    @media (max-width:480px){
+      .contact-photo img{
+        height:200px;
+      }
+    }
+
+    form{
+      display:grid;
+      gap:.7rem;
+      margin-top:.5rem;
+    }
+    label{
+      font-size:.86rem;
+      font-weight:500;
+    }
+    input,textarea{
+      width:100%;
+      padding:.55rem .6rem;
+      border-radius:10px;
+      border:1px solid #cfd3da;
+      font:inherit;
+    }
+    textarea{min-height:110px;resize:vertical;}
+    input:focus,textarea:focus{
+      outline:none;
+      border-color:var(--blue);
+      box-shadow:0 0 0 1px rgba(89,122,145,.35);
+    }
+    button{
+      border:none;
+      border-radius:999px;
+      padding:.55rem .9rem;
+      font:inherit;
+      background:var(--blue);
+      color:#fff;
+      cursor:pointer;
+      margin-top:.2rem;
+    }
+    button:hover{background:#4c6a7e;}
+
+    footer{
+      padding:1.8rem 0 2.4rem;
+      text-align:center;
+      font-size:.9rem;
+      color:#465264;
+    }
   </style>
 </head>
 <body>
@@ -56,141 +376,208 @@
         <a href="artikler.html">Artikler & projekter</a>
         <a href="bag-historien.html">Et liv som reporter</a>
         <a href="om.html">Inde i privaten</a>
-        <a href="#kontakt" class="cta" onclick="location.href='index.html#kontakt';return false;">Kontakt</a>
+        <a href="#kontakt" class="cta">Kontakt</a>
       </nav>
     </div>
   </header>
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Palle Nevad Frandsen",
-  "jobTitle": "Journalist og storyteller",
-  "url": "https://pallenevadfrandsen.github.io",
-  "image": "https://pallenevadfrandsen.github.io/assets/palle.jpg",
-  "sameAs": [
-    "https://www.facebook.com/palle.n.frandsen",
-    "https://www.linkedin.com/in/pallefrandsen/",
-    "https://www.instagram.com/pallefrandsen/",
-    "https://www.tiktok.com/@nevad75"
-  ],
-  "email": "mailto:palle.frandsen@gmail.com",
-  "telephone": "+45 51 23 93 36",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Maribo",
-    "addressCountry": "DK"
-  }
-}
-  </script>
   <main>
     <!-- HERO -->
-    <section class="hero" style="padding:clamp(3rem,6vw,5rem) 0 3rem;background:linear-gradient(180deg,#f2f6f9 0%, #ffffff 55%);">
-      <div class="container" style="display:grid;gap:clamp(1.2rem,3vw,2rem);grid-template-columns:0.85fr 1.15fr;align-items:center">
-        <div>
-          <div class="muted" style="font-weight:600;">Journalist, fortæller og formidler</div>
-          <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.2vw + .3rem,4.6rem);line-height:1.06;margin:.6rem 0 .8rem;color:#1F2E3D">Palle Nevad Frandsen</h1>
-          <blockquote style="margin:1.1rem auto 0;max-width:34ch;text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.15rem,1.4vw + .6rem,1.7rem);color:#1d2a37;">“Jeg tror på, at de bedste historier får os til at se verden fra nye vinkler.”</blockquote>
-        </div>
-        <figure style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/11;background:linear-gradient(135deg,#7f9aab,#e4dfd7)">
-          <img src="assets/hero.jpg" alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen" style="width:100%;height:100%;object-fit:cover;display:block">
-          <figcaption style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);color:white;font-size:0.9rem;line-height:1.4;padding:0.6rem 1rem;font-style:italic;">Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. <span style="opacity:.9;font-style:normal;font-weight:400;">Foto: Palle Nevad Frandsen</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Foredrag -->
-    <section id="foredrag">
-      <div class="container">
-        <h2 class="section-title">Foredrag</h2>
-        <p class="muted">Udvalgte oplæg – se flere emner på undersiden.</p>
-        <div style="display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))">
-          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem"><h3>Kulturen skaber fællesskab</h3><p>Hvordan musik, teater, litteratur og lokale initiativer samler mennesker.</p></article>
-          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem"><h3>Lokalpolitik gennem journalistens øjne</h3><p>Indblik i kommunalpolitikens maskinrum – mennesker, magt og værdier.</p></article>
-        </div>
-        <div class="button-row"><a class="cta" href="foredrag.html">Se alle foredrag</a></div>
-      </div>
-    </section>
-
-    <!-- Artikler -->
-    <section id="artikler-teaser" style="background:linear-gradient(0deg, white, #eeeae3);">
-      <div class="container">
-        <h2 class="section-title">Udvalgte artikler</h2>
-        <p class="muted">Et par nedslag – læs flere artikler på undersiden.</p>
-        <div style="display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))">
-          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;overflow:hidden">
-            <img src="assets/article1.jpg" alt="" style="aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:.7rem">
-            <div class="meta">7. november 2025</div>
-            <h3 style="margin:.2rem 0 .4rem">En ting bekymrer Lollands unge mere end klimaet</h3>
-            <a class="button-link" href="https://www.folketidende.dk/nyheder/en-ting-bekymrer-lollands-unge-mere-end-klimaet/5081841" target="_blank" rel="noopener">Læs artiklen</a>
-          </article>
-          <article class="card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;overflow:hidden">
-            <img src="assets/article5.jpg" alt="" style="aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:.7rem">
-            <div class="meta">4. august 2025</div>
-            <h3 style="margin:.2rem 0 .4rem">Formand går 30.000 skridt om dagen – og sover bedst med budget i nul</h3>
-            <a class="button-link" href="https://www.folketidende.dk/nyheder/formand-gar-30000-skridt-om-dagen-og-sover-bedst-med-budget-i-nul/4995140" target="_blank" rel="noopener">Læs artiklen</a>
-          </article>
-        </div>
-        <div class="button-row"><a class="cta" href="artikler.html">Se alle artikler</a></div>
-      </div>
-    </section>
-
-    <!-- Et liv som reporter + Inde i privaten -->
     <section>
-      <div class="container" style="display:grid;gap:1.4rem;grid-template-columns:1fr 1fr">
-        <div class="panel" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.25rem">
-          <h2 class="section-title">Et liv som reporter</h2>
-          <p>Jeg har i mere end 20 år arbejdet med journalistik, der tager udgangspunkt i mennesker og fællesskab.</p>
-          <a class="cta" href="bag-historien.html">Læs mere</a>
+      <div class="container hero">
+        <div>
+          <div class="hero-kicker">Journalist, fortæller og formidler</div>
+          <h1>Palle Nevad Frandsen</h1>
+          <p class="hero-lead">
+            Lokaljournalist med hjertet plantet på Lolland – med fokus på kultur, lokalpolitik,
+            menneskefortællinger og den gode historie, der binder os sammen.
+          </p>
+          <p class="hero-quote">
+            “Jeg tror på, at de bedste historier får os til at se verden fra nye vinkler.”
+          </p>
         </div>
-        <div class="panel" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.25rem">
-          <h2 class="section-title">Inde i privaten</h2>
-          <p>Storyteller med over 20 års erfaring fra dagbladsverdenen. Jeg formidler komplekse historier engagerende og forståeligt.</p>
-          <a class="cta" href="om.html">Læs mere</a>
+        <div class="hero-img-wrap">
+          <img src="assets/hero.jpg"
+               alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen">
+          <div class="hero-caption">
+            Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Kontakt -->
-    <section id="kontakt">
-      <div class="container">
-        <h2 class="section-title" style="margin-bottom:1rem;">Jeg vil gerne høre fra dig</h2>
-        <div class="contact-wrap" style="display:grid;gap:1.4rem;grid-template-columns:1.1fr .9fr;align-items:stretch">
-          <div class="contact-card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;height:100%;display:flex;flex-direction:column">
-            <div class="contact-body">
-              <h3 style="margin:0 0 .6rem">Kontakt</h3>
-              <div class="contact-meta">
-                <p class="address-line">📍 <em>Østre Boulevard 23, Maribo</em></p>
-                <p><span class="label" style="font-weight:600">Email:</span> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a></p>
-                <p><span class="label" style="font-weight:600">Tlf.:</span> <a href="tel:+4551239336">+45 51 23 93 36</a></p>
-              </div>
-              <div class="socials" style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.7rem">
-                <a href="https://www.facebook.com/palle.n.frandsen" target="_blank" rel="noopener" class="button-link">Facebook</a>
-                <a href="https://www.linkedin.com/in/pallefrandsen/" target="_blank" rel="noopener" class="button-link">LinkedIn</a>
-                <a href="https://www.instagram.com/pallefrandsen/" target="_blank" rel="noopener" class="button-link">Instagram</a>
-                <a href="https://www.tiktok.com/@nevad75" target="_blank" rel="noopener" class="button-link">TikTok</a>
-              </div>
+    <!-- FOREDRAG + UDVALGTE ARTIKLER -->
+    <section>
+      <div class="container two-col">
+        <!-- Foredrag -->
+        <div>
+          <div class="pill">Foredrag</div>
+          <h2 class="section-title">Oplæg og fortællende foredrag</h2>
+          <p class="muted">
+            Jeg holder oplæg og fortællende foredrag om de historier, der binder os sammen – i kulturen,
+            i politikken og i hverdagen.
+          </p>
+
+          <div class="mini-grid" style="margin-top:.8rem;">
+            <div>
+              <h3 style="margin:.1rem 0 .2rem;font-size:1.02rem;">Kulturen skaber fællesskab</h3>
+              <p class="muted" style="font-size:.96rem;margin:0;">
+                Hvordan musik, teater, litteratur og lokale initiativer ikke bare underholder – men samler mennesker
+                på tværs af alder, baggrund og holdninger.
+              </p>
             </div>
-            <figure class="portrait-wrap" style="aspect-ratio:4/5;border-radius:14px;overflow:hidden;margin-top:.9rem">
-              <img src="assets/palle.jpg" alt="Palle Nevad Frandsen" style="width:100%;height:100%;object-fit:cover;display:block">
-            </figure>
+            <div>
+              <h3 style="margin:.3rem 0 .2rem;font-size:1.02rem;">Lokalpolitik gennem journalistens øjne</h3>
+              <p class="muted" style="font-size:.96rem;margin:0;">
+                Indblik i kommunalpolitikens maskinrum – hvor mennesker, magt og værdier mødes, og beslutninger
+                får helt konkrete konsekvenser i hverdagen.
+              </p>
+            </div>
+            <div>
+              <h3 style="margin:.3rem 0 .2rem;font-size:1.02rem;">Filippinerne – et sydøstasiatisk paradis set gennem en danskers øjne</h3>
+              <p class="muted" style="font-size:.96rem;margin:0;">
+                Fortællinger fra et land fuld af kontraster, hvor varme, fællesskab og tro spiller en central rolle
+                i hverdagen. Et personligt blik på kulturmøder, livsglæde og det menneskelige i globaliseringens tid.
+              </p>
+            </div>
           </div>
 
-          <div class="contact-card" style="background:white;border:1px solid #ece9e3;border-radius:14px;padding:1.1rem;height:100%;display:flex;flex-direction:column">
-            <h3 style="margin-top:0">Send mig en besked</h3>
-            <form action="https://formspree.io/f/mdkynbdl" method="POST" class="contact-form">
-              <label>Dit navn</label>
-              <input type="text" name="name" required style="width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px">
-              <label>Din e-mail</label>
-              <input type="email" name="_replyto" required style="width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px">
-              <label>Besked</label>
-              <textarea name="message" rows="6" required style="width:100%;padding:.7rem .8rem;border:1px solid #dfe5ea;border-radius:10px"></textarea>
-              <input type="hidden" name="_subject" value="Henvendelse fra pallenevadfrandsen.github.io">
-              <input type="text" name="_gotcha" style="display:none">
-              <button type="submit" class="cta" style="border:none;cursor:pointer;margin-top:.8rem">Send besked</button>
-              <p style="font-size:.9rem;opacity:.8;margin-top:.5rem">Du kan også skrive direkte på <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a>.</p>
+          <a class="link-button" href="foredrag.html">Se alle foredrag →</a>
+        </div>
+
+        <!-- Udvalgte artikler -->
+        <div>
+          <div class="pill">Udvalgte artikler</div>
+          <h2 class="section-title">Nedslag i historierne</h2>
+          <p class="muted">
+            Et lille udvalg af artikler – resten finder du på undersiden.
+          </p>
+
+          <div class="article-card">
+            <div class="article-date">7. november 2025</div>
+            <div class="article-title">En ting bekymrer Lollands unge mere end klimaet</div>
+            <p class="muted" style="font-size:.95rem;margin:0 0 .35rem;">
+              Unges trivsel set tæt på – hvad fylder mest, og hvorfor?
+            </p>
+            <a class="link-button" href="https://www.folketidende.dk/nyheder/en-ting-bekymrer-lollands-unge-mere-end-klimaet/5081841" target="_blank" rel="noopener">
+              Læs artiklen
+            </a>
+          </div>
+
+          <div class="article-card">
+            <div class="article-date">4. august 2025</div>
+            <div class="article-title">Formand går 30.000 skridt om dagen – og sover bedst med budget i nul</div>
+            <p class="muted" style="font-size:.95rem;margin:0 0 .35rem;">
+              Arbejdsglæde, ansvar og et højt skridttal i hverdagen.
+            </p>
+            <a class="link-button" href="https://www.folketidende.dk/nyheder/formand-gar-30000-skridt-om-dagen-og-sover-bedst-med-budget-i-nul/4995140" target="_blank" rel="noopener">
+              Læs artiklen
+            </a>
+          </div>
+
+          <a class="link-button" href="artikler.html">Se alle artikler & projekter →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ET LIV SOM REPORTER + INDE I PRIVATEN -->
+    <section>
+      <div class="container two-col">
+        <div>
+          <div class="pill">Et liv som reporter</div>
+          <h2 class="section-title">Mennesker, mudder og mening</h2>
+          <p class="muted">
+            Jeg har i mere end 20 år arbejdet med journalistik, der tager udgangspunkt i mennesker og fællesskab.
+            For mig handler den gode historie om at forstå – ikke fordømme. Om at give stemme til de erfaringer,
+            der ofte bliver overset.
+          </p>
+          <div class="subtle-card">
+            <p class="muted" style="margin:0;font-size:.95rem;">
+              På undersiden deler jeg nedslag fra arbejdslivet – fra stormfloder, reportage-mudder og
+              hårde retssager til de små historier, der samler et lokalsamfund.
+            </p>
+          </div>
+          <a class="link-button" href="bag-historien.html">Læs mere →</a>
+        </div>
+
+        <div>
+          <div class="pill">Inde i privaten</div>
+          <h2 class="section-title">Mennesket bag journalistikken</h2>
+          <p class="muted">
+            Gift med Maricel og far til Steven. Vild med fodbold, teater og musik – og engageret i lokale kulturliv
+            og foreningsliv, blandt andet som medskaber af koncerter på egnsteatret og i en filippinsk-dansk venskabsforening.
+          </p>
+          <div class="subtle-card">
+            <p class="muted" style="margin:0;font-size:.95rem;">
+              På undersiden kan du læse lidt mere om hverdagen, interesserne og det, der fylder udenfor spalterne –
+              men som alligevel farver mit blik på verden.
+            </p>
+          </div>
+          <a class="link-button" href="om.html">Inde i privaten →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Tekst + info -->
+          <div>
+            <h2 class="contact-header">Jeg vil gerne høre fra dig</h2>
+            <p class="contact-meta">
+              Har du brug for en oplægsholder, en fortæller eller en journalistisk makker til et projekt?
+              Så er du meget velkommen til at tage fat i mig.
+            </p>
+
+            <p class="contact-details">
+              <span><span class="icon">📍</span>Østre Boulevard 23, 4930 Maribo</span>
+            </p>
+            <p class="contact-details">
+              <span><span class="icon">✉️</span><a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a></span>
+            </p>
+            <p class="contact-details">
+              <span><span class="icon">📞</span><a href="tel:+4551239336">+45 51 23 93 36</a></span>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/palle.n.frandsen" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.linkedin.com/in/pallefrandsen/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://www.instagram.com/pallefrandsen/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.tiktok.com/@nevad75" target="_blank" rel="noopener">TikTok</a>
+            </div>
+          </div>
+
+          <!-- Billede + formular -->
+          <div class="contact-card">
+            <div class="contact-photo">
+              <img src="assets/contact-palle.jpg" alt="Palle Nevad Frandsen">
+            </div>
+
+            <h3 style="margin:.2rem 0 .4rem;font-size:1.05rem;">Send mig en besked</h3>
+            <p class="muted" style="font-size:.9rem;margin:0 0 .4rem;">
+              Skriv et par linjer om, hvad du har i tankerne – så vender jeg tilbage hurtigst muligt.
+            </p>
+
+            <form action="https://formspree.io/f/mdkynbdl" method="POST">
+              <div>
+                <label for="navn">Dit navn</label>
+                <input type="text" id="navn" name="navn" required>
+              </div>
+              <div>
+                <label for="email">Din e-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div>
+                <label for="besked">Besked</label>
+                <textarea id="besked" name="besked" required></textarea>
+              </div>
+              <button type="submit">Send besked</button>
             </form>
+
+            <p class="muted" style="font-size:.85rem;margin:.6rem 0 0;">
+              Du kan også skrive direkte på <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a>.
+            </p>
           </div>
         </div>
       </div>
@@ -198,11 +585,13 @@
   </main>
 
   <footer>
-    <div class="container small">
-      <p><strong>Kontakt:</strong> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a></p>
-      <p>© <span id="year"></span> Palle Nevad Frandsen</p>
+    <div class="container">
+      Kontakt: <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a><br>
+      © <span id="year"></span> Palle Nevad Frandsen
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
