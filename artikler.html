@@ -40,7 +40,25 @@
 
     .video-section{margin-top:2.5rem;padding:2rem 0;border-top:1px solid #e0d9cf}
     .video-section .section-title{margin-bottom:.5rem}
-    .video-list{display:grid;gap:1.8rem}
+
+    /* ÆNDRET: mindre og mere kompakte videoer på web */
+    .video-list{
+      display:grid;
+      gap:1.4rem;
+      max-width:960px;                       /* smallere samlet blok på web */
+      margin:1.6rem auto 0;                  /* centreret */
+      grid-template-columns:repeat(2,minmax(0,1fr)); /* 2 videoer ved siden af hinanden */
+    }
+
+    /* Mobil: 1 video pr. række, fuld bredde */
+    @media (max-width:768px){
+      .video-list{
+        grid-template-columns:1fr;
+        max-width:none;
+        margin-top:1.4rem;
+      }
+    }
+
     .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,0.12);background:#000}
     .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
   </style>
