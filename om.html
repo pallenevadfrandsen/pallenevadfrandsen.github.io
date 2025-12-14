@@ -1,34 +1,263 @@
 <!doctype html>
 <html lang="da">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inde i privaten – Palle Nevad Frandsen</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inde i privaten – Palle Nevad Frandsen</title>
+  <meta name="description" content="Inde i privaten: Et kig ind i hverdagen – familie, fritid, engagement og Filippinerne." />
+  <link rel="canonical" href="https://pallenevadfrandsen.github.io/om.html"/>
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Inde i privaten – Palle Nevad Frandsen">
+  <meta property="og:description" content="Et kig ind i hverdagen – familie, fritid, engagement og Filippinerne.">
+  <meta property="og:url" content="https://pallenevadfrandsen.github.io/om.html">
+  <meta property="og:site_name" content="Palle Nevad Frandsen">
+  <meta property="og:image" content="https://pallenevadfrandsen.github.io/assets/om-hero.jpg">
+  <meta property="og:image:alt" content="Palle Nevad Frandsen – Inde i privaten">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inde i privaten – Palle Nevad Frandsen">
+  <meta name="twitter:description" content="Et kig ind i hverdagen – familie, fritid, engagement og Filippinerne.">
+  <meta name="twitter:image" content="https://pallenevadfrandsen.github.io/assets/om-hero.jpg">
+  <meta name="theme-color" content="#597A91" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--blue:#597A91;--ink:#1F2E3D;--ivory:#F7F5F2;--sand:#E4DFD7;--maxw:1120px;--radius:14px;}
+    *,*::before,*::after{box-sizing:border-box} html,body{margin:0;padding:0} img{max-width:100%;display:block}
+    html{scroll-behavior:smooth;}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';color:var(--ink);background:var(--ivory);line-height:1.6;letter-spacing:.01em}
+    a{color:var(--blue);text-underline-offset:2px}
+    .container{width:min(100% - 2rem,var(--maxw));margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(6px);background:rgba(247,245,242,.9);border-bottom:1px solid #e9e6e0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
+    .brand{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,2vw + .5rem,1.6rem);font-weight:600;color:var(--ink);letter-spacing:.3px}
+    nav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+    nav a{text-decoration:none;color:var(--ink);opacity:.9;font-weight:500;padding:.55rem .6rem;border-radius:10px;line-height:1}
+    nav a:hover{background:rgba(89,122,145,.12)}
+    .cta{background:var(--blue);color:white;padding:.55rem .9rem;border-radius:999px;text-decoration:none;font-weight:600;box-shadow:0 4px 14px rgba(89,122,145,.18)}
+    .cta:hover{background:#4c6a7e}
+
+    section{padding:clamp(2.2rem,5vw,3.6rem) 0}
+    .kicker{font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:#6a7a88;margin:0 0 .3rem}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,2vw + .9rem,2.4rem);margin:0 0 .8rem;color:#597A91}
+    .muted{color:#2a3a49}
+    .button-link{display:inline-block;margin-top:.6rem;padding:.45rem .75rem;border:1px solid #cfd7dd;border-radius:10px;text-decoration:none;color:#1F2E3D}
+    .button-link:hover{background:#f2f5f7}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:1.4rem;align-items:center}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,2.4vw + .9rem,2.9rem);margin:.1rem 0 .6rem;color:var(--ink)}
+    .lead{font-size:1.05rem;margin:0 0 .85rem}
+    .quote{font-style:italic;margin:0;color:#435262}
+    .media{border-radius:var(--radius);overflow:hidden;border:1px solid #e9e6e0;box-shadow:0 18px 45px rgba(0,0,0,.20);background:#000}
+    .media.ratio{aspect-ratio:16/9}
+    .media img{width:100%;height:100%;object-fit:cover}
+    .caption{padding:.55rem .75rem;background:rgba(0,0,0,.55);color:#f8f4ee;font-size:.82rem;line-height:1.35}
+    .caption-wrap{position:relative}
+    .caption-wrap .caption{position:absolute;left:.8rem;right:.8rem;bottom:.8rem;border-radius:12px}
+
+    @media(max-width:860px){.hero{grid-template-columns:1fr}.caption-wrap .caption{position:static;border-radius:0}}
+
+    /* SPLITS */
+    .split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:1.4rem;align-items:start}
+    .split.reverse{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
+    .card{background:#fff;border:1px solid #ece9e3;border-radius:var(--radius);padding:1.1rem 1.15rem}
+    .h3{margin:.1rem 0 .5rem;font-size:1.2rem}
+    .card p{margin:.5rem 0}
+    .pill{display:inline-block;font-size:.85rem;padding:.25rem .7rem;border-radius:999px;background:#e8edf2;color:#425365;margin-bottom:.55rem}
+    .spacer{height:.9rem}
+    @media(max-width:860px){
+      .split,.split.reverse{grid-template-columns:1fr}
+      .split.reverse .order-text{order:1}
+      .split.reverse .order-media{order:2}
+    }
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:.9rem}
+    .g1{grid-column:span 7}
+    .g2{grid-column:span 5}
+    .g3{grid-column:span 5}
+    .g4{grid-column:span 7}
+    .g5{grid-column:span 6}
+    .g6{grid-column:span 6}
+    @media(max-width:900px){
+      .gallery{grid-template-columns:1fr;gap:.8rem}
+      .g1,.g2,.g3,.g4,.g5,.g6{grid-column:auto}
+    }
+
+    footer{padding:2.2rem 0 3rem;border-top:1px solid #ece9e3}
+    .small{font-size:.95rem}
+    @media(max-width:680px){.nav{gap:.5rem 0;} nav{gap:.35rem;} nav a.cta{margin-left:auto;} }
+  </style>
 </head>
 <body>
-<main class="container">
+  <header>
+    <div class="container nav">
+      <div class="brand">Palle Nevad Frandsen</div>
+      <nav>
+        <a href="foredrag.html">Foredrag</a>
+        <a href="artikler.html">Artikler & projekter</a>
+        <a href="bag-historien.html">Et liv som reporter</a>
+        <a href="om.html">Inde i privaten</a>
+        <a href="#kontakt" class="cta" onclick="location.href='index.html#kontakt';return false;">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <img src="assets/privat-hero-16x9.jpg" alt="Inde i privaten – Palle Nevad Frandsen">
-  <div class="hero-text">
-    <h1>Inde i privaten</h1>
-    <p>Når jeg ikke jagter historier, står med blokken i hånden eller sidder ved tastaturet, er jeg først og fremmest mand, far og en del af et lokalt fællesskab på Lolland.</p>
-  </div>
-</section>
+  <main>
+    <!-- HERO -->
+    <section>
+      <div class="container hero">
+        <div>
+          <p class="kicker">Inde i privaten</p>
+          <h1>Et kig bag journalisten</h1>
+          <p class="lead muted">
+            Når jeg ikke jagter historier, står med blokken i hånden eller sidder ved tastaturet, er jeg først og fremmest mand, far
+            og en del af et lokalt fællesskab på Lolland.
+          </p>
+          <p class="muted" style="margin:0 0 .6rem;">
+            Her får du et lille kig ind i hverdagen – til fodbolden, familien, musikken, og alt det der ligger mellem deadlines og dagligdag.
+          </p>
+          <a class="button-link" href="index.html">← Til forsiden</a>
+        </div>
 
-<section class="block">
-  <h2>Familie</h2>
-  <img src="assets/privat-familie-aften.jpg" alt="Familie">
-  <p>Jeg er gift med Maricel og far til Steven...</p>
-</section>
+        <div class="media ratio caption-wrap">
+          <img src="assets/om-hero.jpg" alt="Palle Nevad Frandsen – Inde i privaten">
+          <div class="caption">Inde i privaten – et lille kig ind i hverdagen.</div>
+        </div>
+      </div>
+    </section>
 
-<section class="block">
-  <h2>Filippinerne</h2>
-  <img src="assets/privat-filippinerne.jpg" alt="Filippinerne">
-  <p>Gennem min kone og svigerfamilie har Filippinerne fået en naturlig plads i vores liv...</p>
-</section>
+    <!-- FAMILIE -->
+    <section>
+      <div class="container split">
+        <div class="media ratio">
+          <img src="assets/om-familie.jpg" alt="Familie – hverdag og ferie">
+        </div>
 
-</main>
+        <div class="card">
+          <div class="pill">Familie</div>
+          <h2 class="h3">Hjemme er der plads til både grin og ro</h2>
+          <p class="muted">
+            Jeg er gift med Maricel og far til Steven, som efterhånden er blevet 16 år og temmelig meget sin egen.
+          </p>
+          <p class="muted">
+            Hverdagen hos os er en blanding af skole, arbejde, aftensmadssnakke, fodbold i fjernsynet, musik i højttalerne og de små pauser,
+            hvor vi bare lige lander sammen. Når det er ferie holder vi af at rejse og se nye steder.
+          </p>
+          <p class="muted">
+            Familien fylder meget – både i mit privatliv og i måden, jeg ser verden på. Mange af de historier, jeg fortæller, handler i bund og grund
+            om relationer, ansvar og fællesskaber. Det starter tit derhjemme.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRITID -->
+    <section>
+      <div class="container split reverse">
+        <div class="card order-text">
+          <div class="pill">Fritid</div>
+          <h2 class="h3">Fodbold, teater og musik</h2>
+          <p class="muted">
+            Jeg er vild med (engelsk) fodbold, og der bliver set en del kampe hjemme hos os. Fodbolden er for mig både spænding, drama og fællesskab
+            – på tribunen, i stuen og i snakken bagefter.
+          </p>
+          <p class="muted">
+            Teater og musik fylder også. Jeg har været med til at skabe koncerter på vores lokale egnsteater, og noget af det bedste jeg ved,
+            er, når et rum fyldes af mennesker, lys og lyd – og vi for en stund er fælles om den samme oplevelse.
+          </p>
+          <p class="muted">
+            Det er måske også derfor, jeg er så optaget af kulturens rolle i vores hverdagsliv. Den binder os sammen på en måde,
+            som ingen rapport eller regneark kan.
+          </p>
+        </div>
+
+        <div class="media ratio order-media">
+          <img src="assets/om-fritid.jpg" alt="Fritid – fodbold, teater og musik">
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT -->
+    <section>
+      <div class="container split">
+        <div class="media ratio">
+          <img src="assets/om-engagement.jpg" alt="Engagement – fællesskaber og ansvar">
+        </div>
+
+        <div class="card">
+          <div class="pill">Engagement</div>
+          <h2 class="h3">Fællesskaber kræver, at nogen tager ansvar</h2>
+          <p class="muted">
+            Jeg har i flere år været engageret i skoleverdenen, blandt andet som formand for bestyrelsen på en stor privatskole.
+            Det arbejde har givet mig et indblik i hverdagen for både børn, forældre og medarbejdere – og nogle helt konkrete diskussioner om værdier,
+            trivsel og retning.
+          </p>
+          <p class="muted">
+            Derudover har jeg været med til at starte en filippinsk-dansk venskabsforening, hvor vi arbejder for at bygge bro mellem kulturer,
+            skabe møder på tværs og gøre verden lidt mindre.
+          </p>
+          <p class="muted">
+            Fællesskaber opstår ikke af sig selv. De kræver tid, tålmodighed – og mennesker, der gider tage et ansvar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILIPPINERNE -->
+    <section>
+      <div class="container split reverse">
+        <div class="card order-text">
+          <div class="pill">Filippinerne</div>
+          <h2 class="h3">Et ekstra udsyn</h2>
+          <p class="muted">
+            Gennem min kone og svigerfamilie har Filippinerne fået en naturlig plads i vores liv.
+          </p>
+          <p class="muted">
+            Det er et land med stærke fællesskaber, store kontraster, masser af humor og en dyb tro på, at man hjælper hinanden,
+            når det virkelig gælder.
+          </p>
+          <p class="muted">
+            For mig har det givet et andet udsyn: Når jeg fortæller historier herhjemme, har jeg altid en bevidsthed om, at verden er større
+            end vores lille hjørne – men at det, vi oplever lokalt, ofte spejler noget universelt.
+          </p>
+        </div>
+
+        <div class="media ratio order-media">
+          <img src="assets/om-filippinerne.jpg" alt="Filippinerne – familie og rejser">
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERI -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Små øjeblikke</h2>
+        <p class="muted" style="margin:0 0 1rem;">
+          Et lille galleri fra hverdagen – og fra de steder, der giver energi og perspektiv.
+        </p>
+
+        <div class="gallery">
+          <div class="media ratio g1"><img src="assets/om-ro.jpg" alt="Ro"></div>
+          <div class="media ratio g2"><img src="assets/om-hverdag.jpg" alt="Hverdag"></div>
+          <div class="media ratio g3"><img src="assets/om-familie.jpg" alt="Familie"></div>
+          <div class="media ratio g4"><img src="assets/om-filippinerne.jpg" alt="Filippinerne"></div>
+          <div class="media ratio g5"><img src="assets/om-fritid.jpg" alt="Fritid"></div>
+          <div class="media ratio g6"><img src="assets/om-engagement.jpg" alt="Engagement"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container small">
+      <p><strong>Kontakt:</strong> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a></p>
+      <p>© <span id="year"></span> Palle Nevad Frandsen</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
