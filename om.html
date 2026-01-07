@@ -66,27 +66,23 @@
     .block-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
     .block-text{padding:1.1rem 1.15rem}
     .block h2{font-family:'Playfair Display',serif;margin:.1rem 0 .6rem;font-size:1.55rem;color:#597A91}
-    .block figure{margin:0}
-    .block figure img{width:100%;height:100%;object-fit:cover}
 
-    /* CAPTIONS (humoristiske) – kun til emne-billederne */
-    .block figure{position:relative}
+    /* BILLEDTEKSTER UNDER BILLEDET (ingen overlay) */
+    .block figure{margin:0;display:flex;flex-direction:column}
+    .block figure img{width:100%;height:auto;object-fit:cover}
     .block figcaption{
-      position:absolute;
-      left:.8rem; right:.8rem; bottom:.8rem;
-      background:rgba(0,0,0,.55);
-      color:#fff;
-      padding:.45rem .6rem;
-      border-radius:10px;
-      font-size:.82rem;
-      line-height:1.35;
-    }
-    @media (max-width:560px){
-      .block figcaption{font-size:.8rem}
+      position:static;
+      background:transparent;
+      color:#4b5a68;
+      padding:.55rem 1rem .95rem;
+      margin:0;
+      border-radius:0;
+      font-size:.88rem;
+      line-height:1.45;
+      font-style:italic;
     }
 
-    .block figure .ratio-16x9{width:100%}
-    .block.reverse .block-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .block reverse .block-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
     .block.reverse .block-text{order:2}
     .block.reverse figure{order:1}
 
@@ -161,8 +157,8 @@
                 </p>
               </div>
               <figure class="ratio-16x9">
-                <img src="assets/privat-filippinerne.jpg" alt="Familie – Palle, Maricel og Steven">
-                <figcaption>Familie: Familietid omkring middagsbordet – både i hverdagen og på ferierne. Det gør bestemt ikke noget, når samtalerne foregår med god mad og en udsigt, der også er værd at blive siddende for.</figcaption>
+                <img src="assets/privat-familie-aften.jpg" alt="Familie – fælles middag og udsigt">
+                <figcaption>Familie: Fælles middag – både i hverdagen og på ferier. Det gør bestemt ikke noget, når samtalerne foregår med en lækker udsigt omkring os.</figcaption>
               </figure>
             </div>
           </article>
@@ -182,8 +178,8 @@
                 </p>
               </div>
               <figure class="ratio-16x9">
-                <img src="assets/privat-interesser.jpg" alt="Fritid – interesser">
-                <figcaption>Fritid med fuld volumen: Stand up-aftener, kompromisløs fodboldfanatisme og det bedste selskab – familien. Helst samlet, og med masser af latter.</figcaption>
+                <img src="assets/privat-interesser.jpg" alt="Fritid – stand up og fodbold">
+                <figcaption>Fritid: Stand up-aftener, fodboldfanatisme og det at være sammen som familie – helst med grin og kamp i baggrunden.</figcaption>
               </figure>
             </div>
           </article>
@@ -204,7 +200,7 @@
               </div>
               <figure class="ratio-16x9">
                 <img src="assets/privat-engagement.jpg" alt="Engagement – fællesskab og ansvar">
-                <figcaption>Engagement: når ‘det finder vi lige ud af’ bliver til et møde… og så et møde mere.</figcaption>
+                <figcaption>Engagement: Når ‘det finder vi lige ud af’ bliver til et møde… og så et møde mere.</figcaption>
               </figure>
             </div>
           </article>
@@ -224,8 +220,8 @@
                 </p>
               </div>
               <figure class="ratio-16x9">
-                <img src="assets/privat-familie-aften.jpg" alt="Filippinerne – rejser og kulturmøder">
-                <figcaption>Filippinerne: sol, smil og en venlig påmindelse om, at verden er større end Lolland (men Lolland er nu også ret stærk).</figcaption>
+                <img src="assets/privat-filippinerne.jpg" alt="Filippinerne – rejser og kulturmøder">
+                <figcaption>Filippinerne: Sol, smil og en venlig påmindelse om, at verden er større end Lolland (men Lolland er nu også ret stærk).</figcaption>
               </figure>
             </div>
           </article>
