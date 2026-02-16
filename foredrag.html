@@ -26,7 +26,25 @@
     .talk{display:grid;gap:1.1rem;grid-template-columns:1.1fr 1.4fr;align-items:center;background:#fff;border:1px solid #ece9e3;border-radius:var(--radius);padding:1rem}
     .talk:nth-child(even){grid-template-columns:1.4fr 1.1fr}
     .talk h3{font-family:'Playfair Display',serif;margin:.2rem 0 .5rem;color:var(--blue)}
-    .talk img{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:16/10}
+/* MEDIA WRAPPER (stabil på iPhone) */
+.talk-media{
+  width:100%;
+  aspect-ratio:16/10;
+  border-radius:12px;
+  overflow:hidden;
+  background:#e9e6e0;
+}
+.talk-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Hvis der ikke er billede */
+.talk-media.is-empty{
+  background:linear-gradient(135deg, rgba(89,122,145,.18), rgba(0,0,0,0));
+}
     .bullets{margin:.6rem 0 0 0;padding-left:1.1rem}
     .bullets li{margin:.15rem 0}
     .grid{display:grid;gap:1rem}
