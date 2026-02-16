@@ -32,22 +32,33 @@
       display:grid;
       gap:1.1rem;
       grid-template-columns:1fr; /* default: tekst-only */
-      align-items:center;
+      align-items:start;        /* <- vigtig: undgår overlap på mobil */
       background:#fff;
       border:1px solid #ece9e3;
       border-radius:var(--radius);
       padding:1rem;
     }
-    .talk.has-image{grid-template-columns:1.1fr 1.4fr;}
-    .talk.has-image.reverse{grid-template-columns:1.4fr 1.1fr;}
+    .talk.has-image{grid-template-columns:1.1fr 1.4fr;align-items:center}
+    .talk.has-image.reverse{grid-template-columns:1.4fr 1.1fr;align-items:center}
+
     .talk h3{font-family:'Playfair Display',serif;margin:.2rem 0 .5rem;color:var(--blue)}
-    .talk img{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:16/10;display:block}
+
+    /* FIX til iPhone: ingen "height:100%" på billedet, så det ikke lægger sig ovenpå teksten */
+    .talk img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      aspect-ratio:16/10;
+      object-fit:cover;
+    }
+
     .bullets{margin:.6rem 0 0 0;padding-left:1.1rem}
     .bullets li{margin:.15rem 0}
 
     @media (max-width:960px){
       .talk.has-image,
-      .talk.has-image.reverse{grid-template-columns:1fr;}
+      .talk.has-image.reverse{grid-template-columns:1fr;align-items:start}
     }
 
     .back{display:inline-block;margin-bottom:.6rem;border:1px solid #cfd7dd;border-radius:10px;padding:.45rem .7rem;text-decoration:none;color:var(--ink);background:#fff}
