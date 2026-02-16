@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Foredrag – Palle Nevad Frandsen</title>
-  <meta name="description" content="Foredrag med Palle Nevad Frandsen – journalist, fortæller og formidler. Emner: lokaljournalistik, kultur, frivillighed, Filippinerne m.m." />
+  <meta name="description" content="Foredrag med Palle Nevad Frandsen – journalist og fortæller." />
   <meta name="theme-color" content="#597A91" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -15,7 +15,7 @@
     .container{width:min(100% - 2rem,var(--maxw));margin-inline:auto}
     header{position:sticky;top:0;z-index:20;background:rgba(247,245,242,.9);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid #e9e6e0}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
-    .brand{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:.3px}
+    .brand{font-family:'Playfair Display',serif;font-weight:600}
     nav{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
     nav a{color:var(--ink);font-weight:500;padding:.55rem .6rem;border-radius:10px}
     nav a:hover{background:rgba(89,122,145,.12)}
@@ -23,35 +23,20 @@
     section{padding:clamp(2.2rem,5vw,3.6rem) 0}
     .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2vw + .8rem,2.2rem);margin:0 0 1rem;color:var(--blue)}
     .intro{color:#2a3a49;max-width:65ch}
+    .grid{display:grid;gap:1rem}
     .talk{display:grid;gap:1.1rem;grid-template-columns:1.1fr 1.4fr;align-items:center;background:#fff;border:1px solid #ece9e3;border-radius:var(--radius);padding:1rem}
     .talk:nth-child(even){grid-template-columns:1.4fr 1.1fr}
+    .talk:nth-child(even) .talk-media{order:2}
+    .talk:nth-child(even) .talk-content{order:1}
     .talk h3{font-family:'Playfair Display',serif;margin:.2rem 0 .5rem;color:var(--blue)}
-/* MEDIA WRAPPER (stabil på iPhone) */
-.talk-media{
-  width:100%;
-  aspect-ratio:16/10;
-  border-radius:12px;
-  overflow:hidden;
-  background:#e9e6e0;
-}
-.talk-media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* Hvis der ikke er billede */
-.talk-media.is-empty{
-  background:linear-gradient(135deg, rgba(89,122,145,.18), rgba(0,0,0,0));
-}
-    .bullets{margin:.6rem 0 0 0;padding-left:1.1rem}
-    .bullets li{margin:.15rem 0}
-    .grid{display:grid;gap:1rem}
+    .talk-media{width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:#e9e6e0}
+    .talk-media img{width:100%;height:100%;object-fit:cover;display:block}
+    .talk-media.is-empty{background:linear-gradient(135deg, rgba(89,122,145,.18), rgba(0,0,0,0))}
     @media (max-width:960px){
       .talk,.talk:nth-child(even){grid-template-columns:1fr}
+      .talk:nth-child(even) .talk-media,
+      .talk:nth-child(even) .talk-content{order:unset}
     }
-    .back{display:inline-block;margin-bottom:.6rem;border:1px solid #cfd7dd;border-radius:10px;padding:.45rem .7rem}
     footer{padding:2.2rem 0 3rem;border-top:1px solid #ece9e3}
     .small{font-size:.95rem}
   </style>
@@ -69,22 +54,39 @@
       </nav>
     </div>
   </header>
+
   <main>
     <section>
       <div class="container">
-        <a href="index.html" class="back">← Til forsiden</a>
         <h1 class="section-title">Foredrag</h1>
-        <p class="intro">Uanset om det handler om journalistik, lokalpolitik, kultur eller livet i Filippinerne, er mine foredrag personlige, nærværende og altid med en fortælling i centrum. Jeg tror på, at historier binder os sammen – og at et godt foredrag skal mærkes, ikke bare høres.</p>
+        <p class="intro">Personlige foredrag om journalistik, kultur og fællesskab.</p>
+
         <div class="grid">
-    <article class="talk"><img src="assets/foredrag1.jpg" alt="Foredrag 1"><div><h3>1. Historier der binder os sammen – 20 år som lokaljournalist</h3><p>Hvordan finder man de historier, der virkelig betyder noget? I over 20 år har jeg dækket stort og småt på Lolland (og lidt på Falster) – og jeg har lært, at de bedste historier næsten altid gemmer sig i det nære. Dette foredrag handler om at se verden gennem lokale briller, om at give stemme til dem, der sjældent bliver hørt – og om hvorfor journalistik stadig betyder noget.</p><ul class="bullets"><li>Fortællinger fra hverdagen som lokaljournalist</li><li>Indblik i, hvordan små historier skaber store fællesskaber</li><li>Ærlige refleksioner om troværdighed og tillid i medierne</li><li>Et glimt af livet bag avisforsiden</li></ul></div></article><article class="talk"><div><h3>2. Når verden rammer lokalt – journalistik i kriser og forandring</h3><p>Hvordan fortæller man historier, når alt ramler? Med baggrund i mit speciale i krigs-, krise- og katastrofejournalistik deler jeg erfaringer med at formidle svære emner – og samtidig bevare både empati og menneskelighed. Foredraget handler også om forandring: i medierne, i arbejdet og i livet.</p><ul class="bullets"><li>Personlige historier om journalistik i pressede situationer</li><li>Tanker om etik og ansvar, når det gælder</li><li>Hvordan man bevarer sin ro og retning midt i forandring</li><li>Inspiration til at finde mening i kaos</li></ul></div><div></div></article><article class="talk"><div><h3>3. Fra papir til pixels – at overleve (og trives) i den digitale revolution</h3><p>Der var engang, vi slog op i Lademanns Leksikon – i dag bruger jeg ChatGPT. Dette er en personlig rejse gennem 20 års teknologisk forandring i journalistikken. Om at blive ved med at lære nyt, selv når man synes, man burde være færdig med at lære.</p><ul class="bullets"><li>Et humoristisk kig på mediebranchens digitale udvikling</li><li>Erfaringer med AI, sociale medier og nye redskaber</li><li>Ærlige tanker om modstand, nysgerrighed og fornyelse</li><li>Tips til at trives i en verden, der hele tiden forandrer sig</li></ul></div><div></div></article><article class="talk"><div><h3>4. Fællesskab og frivillighed – hvorfor det stadig betyder noget</h3><p>Midt i en travl hverdag kan frivillighed virke som en luksus – men det er i virkeligheden det, der får samfundet til at hænge sammen. Jeg fortæller om mit arbejde i skolebestyrelse, Rotary og lokale foreninger, og hvorfor det giver mening at engagere sig dér, hvor man bor.</p><ul class="bullets"><li>Historier om samarbejde, sammenhold og lokal stolthed</li><li>Erfaringer med ledelse og udvikling i frivillige fællesskaber</li><li>Inspiration til at gøre en forskel – også i det små</li><li>Et kærligt blik på det Danmark, der stadig står sammen</li></ul></div><div></div></article><article class="talk"><img src="assets/foredrag5.jpg" alt="Foredrag 5"><div><h3>5. Kulturen skaber fællesskab – hvordan musik, teater og litteratur binder os sammen</h3><p>Kultur er ikke bare noget, man ser – det er noget, man mærker. Jeg fortæller om at være med til at skabe koncerter på egnsteatret, om glæden ved teater, musik og litteratur – og om hvordan kulturen kan samle mennesker på tværs af alder, baggrund og forskellighed.</p><ul class="bullets"><li>Historier fra det lokale kulturliv</li><li>Tanker om kultur som lim i et samfund</li><li>Eksempler på, hvordan små initiativer kan skabe stor glæde</li><li>Et foredrag fyldt med musikalsk begejstring og menneskelighed</li></ul></div></article><article class="talk"><div><h3>6. Filippinerne – set gennem danske øjne</h3><p>Hvordan ser verden ud, når man møder den med åbne øjne – og åbent hjerte?Jeg fortæller om livet mellem Danmark og Filippinerne, om mødet med et varmt og gæstfrit folk, og om de kulturforskelle, der både kan forundre og berige.</p><ul class="bullets"><li>Personlige fortællinger om kærlighed, familie og kulturmøder</li><li>Et ærligt blik på Filippinerne – langt fra turistbrochurerne</li><li>Hvad vi danskere kan lære af filippinsk livsglæde</li><li>Smil, eftertanke og måske lidt rejselyst</li></ul></div><div></div></article><article class="talk"><img src="assets/foredrag7.jpg" alt="Foredrag 7"><div><h3>7. Journalistik på skoleskemaet – en rejse ind i journalistikken for elever i udskolingen</h3><p>Hvordan lærer man unge at stille de gode spørgsmål – og tænke selv? Dette foredrag er for lærere, elever og forældre, der er nysgerrige på, hvordan journalistik kan bruges i undervisningen – og i livet. Jeg deler erfaringer fra projekter, hvor elever selv har prøvet kræfter med den virkelige journalistrolle.</p><ul class="bullets"><li>Konkrete ideer til undervisning og projekter</li><li>Eksempler på, hvordan journalistik styrker sproget og fællesskabet</li><li>Tanker om unges medieforståelse og kritiske sans</li><li>Et inspirerende blik ind i fremtidens klasseværelse</li></ul></div></article>
+          <article class="talk">
+            <div class="talk-media">
+              <img src="assets/foredrag1.jpg" alt="Foredrag 1">
+            </div>
+            <div class="talk-content">
+              <h3>1. Historier der binder os sammen</h3>
+              <p>Et foredrag om lokaljournalistik og de fortællinger, der skaber fællesskab.</p>
+            </div>
+          </article>
+
+          <article class="talk">
+            <div class="talk-media is-empty" aria-hidden="true"></div>
+            <div class="talk-content">
+              <h3>2. Når verden rammer lokalt</h3>
+              <p>Journalistik i kriser og forandring – med mennesket i centrum.</p>
+            </div>
+          </article>
         </div>
-        <p class="intro" style="margin-top:1.2rem"><strong>Booking:</strong> Skriv til <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> eller ring på <a href="tel:+4551239336">+45 51 23 93 36</a>. Du kan også bruge formularen nederst på forsiden.</p>
+
       </div>
     </section>
   </main>
+
   <footer>
     <div class="container small">
-      <p><strong>Kontakt:</strong> <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a></p>
       <p>© <span id="year"></span> Palle Nevad Frandsen</p>
     </div>
   </footer>
