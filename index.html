@@ -8,6 +8,7 @@
   <meta name="description" content="Lokaljournalist med 20+ års erfaring fra Lolland. Book foredrag om lokaljournalistik, etik og lokalsamfund. Se artikler og oplæg her." />
   <link rel="canonical" href="https://pallenevadfrandsen.dk/" />
 
+  <!-- Open Graph -->
   <meta property="og:locale" content="da_DK">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Palle Nevad Frandsen | Lokaljournalist og foredrag på Lolland">
@@ -17,6 +18,7 @@
   <meta property="og:image" content="https://pallenevadfrandsen.dk/assets/hero.jpg">
   <meta property="og:image:alt" content="Palle Nevad Frandsen – lokaljournalist og foredragsholder">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Palle Nevad Frandsen | Lokaljournalist og foredrag på Lolland">
   <meta name="twitter:description" content="Lokaljournalist med 20+ års erfaring fra Lolland. Book foredrag om lokaljournalistik, etik og lokalsamfund. Se artikler og oplæg her.">
@@ -35,14 +37,26 @@
     "@type": "Person",
     "name": "Palle Nevad Frandsen",
     "url": "https://pallenevadfrandsen.dk/",
+    "image": "https://pallenevadfrandsen.dk/assets/hero.jpg",
     "jobTitle": "Lokaljournalist og foredragsholder",
-    "description": "Lokaljournalist med fokus på kultur, lokalpolitik, menneskefortællinger og foredrag på Lolland.",
+    "description": "Lokaljournalist med 20+ års erfaring fra Lolland. Foredrag om lokaljournalistik, etik og lokalsamfund.",
+    "email": "mailto:palle.frandsen@gmail.com",
+    "telephone": "+45 51 23 93 36",
     "sameAs": [
       "https://www.facebook.com/palle.n.frandsen",
       "https://www.linkedin.com/in/pallefrandsen/",
       "https://www.instagram.com/pallefrandsen/",
       "https://www.tiktok.com/@nevad75"
     ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Palle Nevad Frandsen",
+    "url": "https://pallenevadfrandsen.dk/"
   }
   </script>
 
@@ -54,26 +68,18 @@
       --maxw:1120px;
       --radius:14px;
     }
-
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0}
     html{scroll-behavior:smooth;}
-
     body{
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       color:var(--ink);
       background:var(--ivory);
       line-height:1.6;
     }
-
     img{max-width:100%;display:block}
 
-    a{
-      color:var(--blue);
-      text-decoration:none;
-      text-underline-offset:2px;
-    }
-
+    a{color:var(--blue);text-decoration:none;text-underline-offset:2px}
     a:hover{text-decoration:underline}
 
     .container{
@@ -89,7 +95,6 @@
       backdrop-filter:saturate(120%) blur(6px);
       border-bottom:1px solid #e9e6e0;
     }
-
     .nav{
       display:flex;
       align-items:center;
@@ -98,13 +103,11 @@
       padding:.8rem 0;
       flex-wrap:wrap;
     }
-
     .brand{
       font-family:"Playfair Display",serif;
       font-weight:600;
       font-size:clamp(1.2rem,2vw + .6rem,1.6rem);
     }
-
     nav{
       display:flex;
       gap:.35rem;
@@ -113,7 +116,6 @@
       justify-content:flex-end;
       flex:1;
     }
-
     nav a{
       font-size:.93rem;
       padding:.45rem .6rem;
@@ -121,12 +123,10 @@
       color:var(--ink);
       white-space:nowrap;
     }
-
     nav a:hover{
       background:rgba(89,122,145,.12);
       text-decoration:none;
     }
-
     .cta{
       background:var(--blue);
       color:#fff;
@@ -135,11 +135,7 @@
       font-weight:600;
       box-shadow:0 4px 12px rgba(89,122,145,.25);
     }
-
-    .cta:hover{
-      background:#4c6a7e;
-      text-decoration:none;
-    }
+    .cta:hover{background:#4c6a7e}
 
     @media (max-width:720px){
       .nav{
@@ -154,156 +150,43 @@
     main section{
       padding:clamp(2.1rem,5vw,3.4rem) 0;
     }
-
     .section-title{
       font-family:"Playfair Display",serif;
       font-size:clamp(1.5rem,2vw + .7rem,2.2rem);
       margin:0 0 .7rem;
       color:var(--blue);
     }
+    .muted{color:#2a3a49;font-size:1rem;}
 
-    .muted{
-      color:#2a3a49;
-      font-size:1rem;
-    }
-
-    .muted-small{
-      font-size:.96rem;
-      margin:0;
-    }
-
-    .muted-small-bottom{
-      font-size:.95rem;
-      margin:0 0 .35rem;
-    }
-
-    .muted-card-text{
-      margin:0;
-      font-size:.95rem;
-    }
-
-    .contact-intro{
-      font-size:.9rem;
-      margin:0 0 .4rem;
-    }
-
-    .contact-note{
-      font-size:.85rem;
-      margin:.6rem 0 0;
-    }
-
-    .mini-grid-top{
-      margin-top:.8rem;
-    }
-
-    .feature-title{
-      font-size:1.02rem;
-      margin:.1rem 0 .2rem;
-    }
-
-    .feature-title-spaced{
-      margin:.3rem 0 .2rem;
-    }
-
-    .contact-card-title{
-      margin:.2rem 0 .4rem;
-      font-size:1.05rem;
-    }
-
-    .contact-photo-spaced{
-      margin-bottom:.9rem;
-    }
-
-    /* HERO */
-    .hero{
+    .mini-grid{
       display:grid;
-      grid-template-columns:minmax(0,3fr) minmax(0,2.6fr);
-      gap:2rem;
-      align-items:center;
+      gap:.9rem;
     }
 
-    .hero-kicker{
-      font-size:.9rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#6a7a88;
+    .article-card{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid #ece9e3;
+      padding:1rem 1rem .9rem;
+      margin-bottom:.7rem;
+    }
+    .article-date{
+      font-size:.85rem;
+      color:#6a7582;
       margin-bottom:.2rem;
     }
-
-    .hero-name{
-      font-family:"Playfair Display",serif;
-      font-size:1.05rem;
+    .article-title{
       font-weight:600;
-      color:#435262;
-      margin:0 0 .35rem;
-    }
-
-    .hero h1{
-      font-family:"Playfair Display",serif;
-      font-size:clamp(1.9rem,2.4vw + .8rem,2.6rem);
-      margin:.1rem 0 .6rem;
-      color:var(--ink);
-    }
-
-    .hero-lead{
-      font-size:1.02rem;
-      color:#2a3a49;
-      margin:0 0 .9rem;
-    }
-
-    .hero-quote{
-      font-style:italic;
-      margin:0;
-      color:#435262;
+      margin:0 0 .3rem;
       font-size:.98rem;
     }
 
-    .hero-img-wrap{
+    .subtle-card{
+      background:#fff;
       border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:0 18px 45px rgba(0,0,0,.23);
-      position:relative;
-    }
-
-    .hero-img-wrap img{
-      width:100%;
-      height:100%;
-      max-height:420px;
-      object-fit:cover;
-    }
-
-    .hero-caption{
-      position:absolute;
-      inset:auto .9rem .9rem .9rem;
-      background:rgba(0,0,0,.55);
-      color:#f8f4ee;
-      font-size:.78rem;
-      padding:.45rem .6rem;
-      border-radius:10px;
-      line-height:1.4;
-    }
-
-    @media (max-width:820px){
-      .hero{
-        grid-template-columns:1fr;
-      }
-      .hero-img-wrap img{
-        max-height:360px;
-      }
-    }
-
-    /* To kolonner */
-    .two-col{
-      display:grid;
-      grid-template-columns:minmax(0,1.6fr) minmax(0,1.4fr);
-      gap:2rem;
-      align-items:flex-start;
-    }
-
-    @media (max-width:860px){
-      .two-col{
-        grid-template-columns:1fr;
-      }
+      border:1px solid #ece9e3;
+      padding:1rem 1.1rem;
+      margin-top:.8rem;
     }
 
     .pill{
@@ -315,7 +198,6 @@
       color:#425365;
       margin-bottom:.4rem;
     }
-
     .link-button{
       display:inline-flex;
       align-items:center;
@@ -329,88 +211,119 @@
       color:var(--ink);
       background:#fff;
     }
-
     .link-button:hover{
       background:#f2f5f7;
       text-decoration:none;
     }
 
-    .article-card{
-      background:#fff;
-      border-radius:var(--radius);
-      border:1px solid #ece9e3;
-      padding:1rem 1rem .9rem;
-      margin-bottom:.7rem;
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2.6fr);
+      gap:2rem;
+      align-items:center;
     }
-
-    .article-date{
-      font-size:.85rem;
-      color:#6a7582;
+    .hero-kicker{
+      font-size:.9rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#6a7a88;
       margin-bottom:.2rem;
     }
-
-    .article-title{
-      font-weight:600;
-      margin:0 0 .3rem;
+    .hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(1.9rem,2.4vw + .8rem,2.6rem);
+      margin:.1rem 0 .6rem;
+      color:var(--ink);
+    }
+    .hero-lead{
+      font-size:1.02rem;
+      color:#2a3a49;
+      margin:0 0 .9rem;
+    }
+    .hero-quote{
+      font-style:italic;
+      margin:0;
+      color:#435262;
       font-size:.98rem;
     }
-
-    .mini-grid{
-      display:grid;
-      gap:.9rem;
-    }
-
-    .subtle-card{
-      background:#fff;
+    .hero-img-wrap{
       border-radius:var(--radius);
-      border:1px solid #ece9e3;
-      padding:1rem 1.1rem;
-      margin-top:.8rem;
+      overflow:hidden;
+      box-shadow:0 18px 45px rgba(0,0,0,.23);
+      position:relative;
+    }
+    .hero-img-wrap img{
+      width:100%;
+      height:100%;
+      max-height:420px;
+      object-fit:cover;
+    }
+    .hero-caption{
+      position:absolute;
+      inset:auto .9rem .9rem .9rem;
+      background:rgba(0,0,0,.55);
+      color:#f8f4ee;
+      font-size:.78rem;
+      padding:.45rem .6rem;
+      border-radius:10px;
+      line-height:1.4;
+    }
+    @media (max-width:820px){
+      .hero{
+        grid-template-columns:1fr;
+      }
+      .hero-img-wrap img{
+        max-height:360px;
+      }
     }
 
-    /* Kontakt */
+    .two-col{
+      display:grid;
+      grid-template-columns:minmax(0,1.6fr) minmax(0,1.4fr);
+      gap:2rem;
+      align-items:flex-start;
+    }
+    @media (max-width:860px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+    }
+
     .contact-section{
       background:#eae5de;
       border-top:1px solid #d9d0c4;
     }
-
     .contact-grid{
       display:grid;
       grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr);
       gap:1.6rem;
       align-items:stretch;
     }
-
     @media (max-width:820px){
       .contact-grid{
         grid-template-columns:1fr;
       }
     }
-
     .contact-header{
       font-family:"Playfair Display",serif;
       font-size:1.6rem;
       margin:0 0 .4rem;
       color:var(--ink);
     }
-
     .contact-meta{
       font-style:italic;
       font-size:.98rem;
       margin-bottom:.7rem;
     }
-
     .contact-details{
       font-size:.96rem;
       margin:.15rem 0;
     }
-
     .contact-details span{
       display:inline-flex;
       align-items:center;
       gap:.35rem;
     }
-
     .contact-details .icon{
       font-style:normal;
     }
@@ -421,7 +334,6 @@
       gap:.35rem;
       margin:.7rem 0 0;
     }
-
     .social-links a{
       font-size:.9rem;
       padding:.3rem .65rem;
@@ -429,7 +341,6 @@
       border:1px solid rgba(66,83,101,.25);
       background:#f7f5f2;
     }
-
     .social-links a:hover{
       background:#f0ece6;
       text-decoration:none;
@@ -444,25 +355,21 @@
       flex-direction:column;
       gap:.8rem;
     }
-
     .contact-photo{
       border-radius:var(--radius);
       overflow:hidden;
       margin-bottom:.6rem;
     }
-
     .contact-photo img{
       width:100%;
       height:230px;
       object-fit:cover;
     }
-
     @media (max-width:480px){
       .contact-photo img{
         height:200px;
       }
     }
-
     @media (min-width:768px){
       .contact-photo img{
         height:300px;
@@ -474,12 +381,10 @@
       gap:.7rem;
       margin-top:.5rem;
     }
-
     label{
       font-size:.86rem;
       font-weight:500;
     }
-
     input,textarea{
       width:100%;
       padding:.55rem .6rem;
@@ -487,18 +392,12 @@
       border:1px solid #cfd3da;
       font:inherit;
     }
-
-    textarea{
-      min-height:110px;
-      resize:vertical;
-    }
-
+    textarea{min-height:110px;resize:vertical;}
     input:focus,textarea:focus{
       outline:none;
       border-color:var(--blue);
       box-shadow:0 0 0 1px rgba(89,122,145,.35);
     }
-
     button{
       border:none;
       border-radius:999px;
@@ -509,7 +408,6 @@
       cursor:pointer;
       margin-top:.2rem;
     }
-
     button:hover{background:#4c6a7e;}
 
     footer{
@@ -539,20 +437,18 @@
       <div class="container hero">
         <div>
           <div class="hero-kicker">Journalist, fortæller og formidler</div>
-          <p class="hero-name">Palle Nevad Frandsen</p>
-          <h1>Lokaljournalist og foredragsholder på Lolland</h1>
+          <h1>Palle Nevad Frandsen</h1>
           <p class="hero-lead">
-            Jeg er lokaljournalist på Lolland med mere end 20 års erfaring. Jeg skriver om kultur,
-            lokalpolitik og menneskefortællinger – og holder foredrag om lokaljournalistik og lokalsamfund.
+            Lokaljournalist med hjertet plantet på Lolland – med fokus på kultur, lokalpolitik,
+            menneskefortællinger og den gode historie, der binder os sammen.
           </p>
           <p class="hero-quote">
             “Jeg tror på, at de bedste historier får os til at se verden fra nye vinkler.”
           </p>
         </div>
-
         <div class="hero-img-wrap">
           <img src="assets/hero.jpg"
-               alt="Palle Nevad Frandsens journalistiske arbejde på Lolland">
+               alt="Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen">
           <div class="hero-caption">
             Miljøminister Magnus Heunicke på besøg i jættestuen Glentehøj på Nordlolland. Foto: Palle Nevad Frandsen
           </div>
@@ -570,26 +466,24 @@
             i politikken og i hverdagen.
           </p>
 
-          <div class="mini-grid mini-grid-top">
+          <div class="mini-grid" style="margin-top:.8rem;">
             <div>
-              <h3 class="feature-title">Kulturen skaber fællesskab</h3>
-              <p class="muted muted-small">
+              <h3 style="margin:.1rem 0 .2rem;font-size:1.02rem;">Kulturen skaber fællesskab</h3>
+              <p class="muted" style="font-size:.96rem;margin:0;">
                 Hvordan musik, teater, litteratur og lokale initiativer ikke bare underholder – men samler mennesker
                 på tværs af alder, baggrund og holdninger.
               </p>
             </div>
-
             <div>
-              <h3 class="feature-title feature-title-spaced">Lokalpolitik gennem journalistens øjne</h3>
-              <p class="muted muted-small">
+              <h3 style="margin:.3rem 0 .2rem;font-size:1.02rem;">Lokalpolitik gennem journalistens øjne</h3>
+              <p class="muted" style="font-size:.96rem;margin:0;">
                 Indblik i kommunalpolitikens maskinrum – hvor mennesker, magt og værdier mødes, og beslutninger
                 får helt konkrete konsekvenser i hverdagen.
               </p>
             </div>
-
             <div>
-              <h3 class="feature-title feature-title-spaced">Filippinerne – et sydøstasiatisk paradis set gennem en danskers øjne</h3>
-              <p class="muted muted-small">
+              <h3 style="margin:.3rem 0 .2rem;font-size:1.02rem;">Filippinerne – et sydøstasiatisk paradis set gennem en danskers øjne</h3>
+              <p class="muted" style="font-size:.96rem;margin:0;">
                 Fortællinger fra et land fuld af kontraster, hvor varme, fællesskab og tro spiller en central rolle
                 i hverdagen. Et personligt blik på kulturmøder, livsglæde og det menneskelige i globaliseringens tid.
               </p>
@@ -609,7 +503,7 @@
           <div class="article-card">
             <div class="article-date">7. november 2025</div>
             <div class="article-title">En ting bekymrer Lollands unge mere end klimaet</div>
-            <p class="muted muted-small-bottom">
+            <p class="muted" style="font-size:.95rem;margin:0 0 .35rem;">
               Unges trivsel set tæt på – hvad fylder mest, og hvorfor?
             </p>
             <a class="link-button" href="https://www.folketidende.dk/nyheder/en-ting-bekymrer-lollands-unge-mere-end-klimaet/5081841" target="_blank" rel="noopener">
@@ -620,7 +514,7 @@
           <div class="article-card">
             <div class="article-date">4. august 2025</div>
             <div class="article-title">Formand går 30.000 skridt om dagen – og sover bedst med budget i nul</div>
-            <p class="muted muted-small-bottom">
+            <p class="muted" style="font-size:.95rem;margin:0 0 .35rem;">
               Arbejdsglæde, ansvar og et højt skridttal i hverdagen.
             </p>
             <a class="link-button" href="https://www.folketidende.dk/nyheder/formand-gar-30000-skridt-om-dagen-og-sover-bedst-med-budget-i-nul/4995140" target="_blank" rel="noopener">
@@ -636,7 +530,7 @@
     <section>
       <div class="container two-col">
         <div>
-          <div class="pill">Bag historien</div>
+          <div class="pill">Et liv som reporter</div>
           <h2 class="section-title">Mennesker, mudder og mening</h2>
           <p class="muted">
             Jeg har i mere end 20 år arbejdet med journalistik, der tager udgangspunkt i mennesker og fællesskab.
@@ -644,7 +538,7 @@
             der ofte bliver overset.
           </p>
           <div class="subtle-card">
-            <p class="muted muted-card-text">
+            <p class="muted" style="margin:0;font-size:.95rem;">
               På undersiden deler jeg nedslag fra arbejdslivet – fra stormfloder, reportage-mudder og
               hårde retssager til de små historier, der samler et lokalsamfund.
             </p>
@@ -660,7 +554,7 @@
             og foreningsliv, blandt andet som medskaber af koncerter på egnsteatret og i en filippinsk-dansk venskabsforening.
           </p>
           <div class="subtle-card">
-            <p class="muted muted-card-text">
+            <p class="muted" style="margin:0;font-size:.95rem;">
               På undersiden kan du læse lidt mere om hverdagen, interesserne og det, der fylder udenfor spalterne –
               men som alligevel farver mit blik på verden.
             </p>
@@ -680,8 +574,8 @@
               Så er du meget velkommen til at tage fat i mig.
             </p>
 
-            <div class="contact-photo contact-photo-spaced">
-              <img src="assets/contact-palle.jpg" alt="Palle Nevad Frandsen" loading="lazy">
+            <div class="contact-photo" style="margin-bottom:0.9rem;">
+              <img src="assets/contact-palle.jpg" alt="Palle Nevad Frandsen">
             </div>
 
             <p class="contact-details">
@@ -703,8 +597,8 @@
           </div>
 
           <div class="contact-card">
-            <h3 class="contact-card-title">Send mig en besked</h3>
-            <p class="muted contact-intro">
+            <h3 style="margin:.2rem 0 .4rem;font-size:1.05rem;">Send mig en besked</h3>
+            <p class="muted" style="font-size:.9rem;margin:0 0 .4rem;">
               Skriv et par linjer om, hvad du har i tankerne – så vender jeg tilbage hurtigst muligt.
             </p>
 
@@ -724,7 +618,7 @@
               <button type="submit">Send besked</button>
             </form>
 
-            <p class="muted contact-note">
+            <p class="muted" style="font-size:.85rem;margin:.6rem 0 0;">
               Du kan også skrive direkte på <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a>.
             </p>
           </div>
@@ -735,8 +629,7 @@
 
   <footer>
     <div class="container">
-      Kontakt: <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> ·
-      <a href="tel:+4551239336">+45 51 23 93 36</a><br>
+      Kontakt: <a href="mailto:palle.frandsen@gmail.com">palle.frandsen@gmail.com</a> · <a href="tel:+4551239336">+45 51 23 93 36</a><br>
       © <span id="year"></span> Palle Nevad Frandsen
     </div>
   </footer>
