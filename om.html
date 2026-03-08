@@ -30,182 +30,190 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .hero > div,
-    .block-text,
-    .block figure{
-      min-width:0;
-    }
+  .hero > div,
+  .block-text,
+  .block figure{
+    min-width:0;
+  }
 
-    .block-text p{
-      overflow-wrap:anywhere;
-    }
+  .block-text p{
+    overflow-wrap:anywhere;
+  }
 
-    .hero{
-      display:grid;
-      grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
-      gap:1.8rem;
-      align-items:center;
-    }
+  .hero{
+    display:grid;
+    grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
+    gap:1.8rem;
+    align-items:center;
+  }
 
-    .kicker{
-      font-size:.9rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#6a7a88;
-      margin:0 0 .2rem;
-    }
+  .kicker{
+    font-size:.9rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#6a7a88;
+    margin:0 0 .2rem;
+  }
 
-    .hero h1{
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2rem,2.6vw + .8rem,2.7rem);
-      margin:.1rem 0 .65rem;
-      color:var(--ink);
-    }
+  .hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,2.6vw + .8rem,2.7rem);
+    margin:.1rem 0 .65rem;
+    color:var(--ink);
+  }
 
-    .hero p{
-      margin:.4rem 0;
-    }
+  .hero p{
+    margin:.4rem 0;
+  }
 
-    .hero-media{
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:0 18px 45px rgba(0,0,0,.22);
-      background:#000;
-    }
+  .hero-media{
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(0,0,0,.22);
+    background:#000;
+  }
 
-    .ratio-16x9{
-      aspect-ratio:16/9;
-    }
+  .ratio-16x9{
+    aspect-ratio:16/9;
+  }
 
-    .hero-media img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+  .hero-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
 
-    .blocks{
-      display:grid;
-      gap:1.3rem;
-      margin-top:1.2rem;
-    }
+  .blocks{
+    display:grid;
+    gap:1.3rem;
+    margin-top:1.2rem;
+  }
 
-    .block{
-      background:#fff;
-      border:1px solid #ece9e3;
-      border-radius:var(--radius);
-      overflow:hidden;
-    }
+  .block{
+    background:#fff;
+    border:1px solid #ece9e3;
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
 
+  .block-inner{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  }
+
+  .block-text{
+    padding:1.1rem 1.15rem;
+  }
+
+  .block h2{
+    font-family:'Playfair Display',serif;
+    margin:.1rem 0 .6rem;
+    font-size:1.55rem;
+    color:#597A91;
+  }
+
+  .block figure{
+    margin:0;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .block figure img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+  }
+
+  .block figcaption{
+    position:static;
+    background:transparent;
+    color:#4b5a68;
+    padding:.55rem 1rem .95rem;
+    margin:0;
+    border-radius:0;
+    font-size:.88rem;
+    line-height:1.45;
+    font-style:italic;
+  }
+
+  .block.reverse .block-inner{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  }
+
+  .block.reverse .block-text{
+    order:2;
+  }
+
+  .block.reverse figure{
+    order:1;
+  }
+
+  .gallery-wrap{
+    margin-top:2rem;
+    padding-top:1.6rem;
+    border-top:1px solid #e6e1da;
+  }
+
+  .gallery{
+    display:grid;
+    gap:.9rem;
+    grid-template-columns:repeat(12,1fr);
+  }
+
+  .gitem{
+    grid-column:span 4;
+    background:#fff;
+    border:1px solid #ece9e3;
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+
+  .gitem img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+  }
+
+  @media (max-width:1024px){
     .block-inner{
       display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      grid-template-columns:1fr !important;
     }
 
-    .block-text{
-      padding:1.1rem 1.15rem;
+    .block .block-text,
+    .block.reverse .block-text{
+      order:1;
     }
 
-    .block h2{
-      font-family:'Playfair Display',serif;
-      margin:.1rem 0 .6rem;
-      font-size:1.55rem;
-      color:#597A91;
-    }
-
-    .block figure{
-      margin:0;
-      display:flex;
-      flex-direction:column;
+    .block figure,
+    .block.reverse figure{
+      order:2;
     }
 
     .block figure img{
       width:100%;
       height:auto;
-      object-fit:cover;
     }
+  }
 
-    .block figcaption{
-      position:static;
-      background:transparent;
-      color:#4b5a68;
-      padding:.55rem 1rem .95rem;
-      margin:0;
-      border-radius:0;
-      font-size:.88rem;
-      line-height:1.45;
-      font-style:italic;
+  @media (max-width:860px){
+    .hero{
+      grid-template-columns:1fr;
     }
+  }
 
-    .block.reverse .block-inner{
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-    }
-
-    .block.reverse .block-text{
-      order:2;
-    }
-
-    .block.reverse figure{
-      order:1;
-    }
-
-    .gallery-wrap{
-      margin-top:2rem;
-      padding-top:1.6rem;
-      border-top:1px solid #e6e1da;
-    }
-
-    .gallery{
-      display:grid;
-      gap:.9rem;
-      grid-template-columns:repeat(12,1fr);
-    }
-
+  @media (max-width:980px){
     .gitem{
-      grid-column:span 4;
-      background:#fff;
-      border:1px solid #ece9e3;
-      border-radius:var(--radius);
-      overflow:hidden;
+      grid-column:span 6;
     }
+  }
 
-    .gitem img{
-      width:100%;
-      aspect-ratio:16/9;
-      object-fit:cover;
+  @media (max-width:560px){
+    .gitem{
+      grid-column:span 12;
     }
-
-    @media(max-width:860px){
-      .hero{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media(max-width:900px){
-      .block-inner{
-        grid-template-columns:1fr;
-      }
-
-      .block.reverse .block-text{
-        order:1;
-      }
-
-      .block.reverse figure{
-        order:2;
-      }
-    }
-
-    @media(max-width:980px){
-      .gitem{
-        grid-column:span 6;
-      }
-    }
-
-    @media(max-width:560px){
-      .gitem{
-        grid-column:span 12;
-      }
-    }
-  </style>
+  }
+</style>
 
   <script type="application/ld+json">
   {
