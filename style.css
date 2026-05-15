@@ -194,3 +194,72 @@ footer{
   nav{gap:.35rem;}
   nav a.cta{margin-left:auto;}
 }
+
+.narrow {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-hero {
+  padding: 4rem 0 2rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.blog-listing,
+.about-author,
+.latest-news,
+.blog-post {
+  padding: 2rem 0 4rem;
+}
+
+.blog-card,
+.news-card {
+  background: #fff;
+  border: 1px solid rgba(31, 46, 61, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta {
+  font-size: 0.92rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-link {
+  margin-top: 1rem;
+}
+
+.blog-post h1 {
+  margin-bottom: 1rem;
+}
+
+.blog-post h2 {
+  margin-top: 2rem;
+}
+
+.blog-post p {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
