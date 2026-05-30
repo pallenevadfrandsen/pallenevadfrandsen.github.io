@@ -258,6 +258,10 @@ footer{
   object-fit:cover;
 }
 
+.blog-card-thumb img.blog-card-img-left {
+  object-position:28% center;
+}
+
 .blog-card-content {
   padding:1.35rem 1.45rem;
 }
