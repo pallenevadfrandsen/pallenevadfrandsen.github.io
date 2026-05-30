@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /pallenevadfrandsen_articles_links/
+
+Sitemap: https://pallenevadfrandsen.dk/sitemap.xml
