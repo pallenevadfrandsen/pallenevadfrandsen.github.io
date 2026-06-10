@@ -377,3 +377,13 @@ footer{
   border-radius: 14px;
   display: block;
 }
+.blog-inline-image {
+  margin: 2rem auto;
+  max-width: 420px;
+}
+
+.blog-inline-image img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
