@@ -372,3 +372,6 @@ footer{
 }
   display: block;
 }
+.blog-card-img-portrait {
+  object-position: center 18%;
+}
